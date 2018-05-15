@@ -47,5 +47,6 @@ A **Multi-Player Guessing Game** that asks player/s to guess the answer to a pic
 * Current iteration = i1.
 * Subsequent iterations:
 
-    1. Review E2E (incl. code commentary). Apply improvements.
+    1. Run code through validator/s.
+    2. Review E2E (incl. code commentary). Apply improvements.
     
