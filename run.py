@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -8,9 +8,11 @@ def index():
     '''Routing view to render/call index.html in browser'''
     return render_template("index.html", page_heading="Game")
 
-@app.route('/contact')
+@app.route('/contact', methods=["GET", "POST"])
 def contact():
     '''Routing view to render/call contact.html in browser'''
+    if request.method == "POST":
+        print(request.form)
     return render_template("contact.html", page_heading="Contact Developer")
 
 if __name__== '__main__':
