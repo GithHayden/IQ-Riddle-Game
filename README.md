@@ -39,6 +39,12 @@ A **Multi-Player Guessing Game** that asks player/s to guess the answer to a pic
     - Ensure site is as responsive as possible, test on different size devices.
 * Bugs:
     - Describe any interesting bugs (tests not running as expected/failing). Describe expected output, why testing may be failing, how you addressed them, and whether there were any issues that you didn't/couldn't fix.
+    
+
+    * Bugs
+    Unable to get code working in browser - spelled end block, which should have been one word i.e. endblock.
+    'Contact Developer' missing: Typo in page_heading, fixed by correcting/aligning wording conventions.
+    Forgot 'secret_key' leading to error code, fixed by adding to run.py.
 
 ### Final Deployment
 * Heroku: Deploy final version of code. Provide instructions on how project was deployed to Heroku.
