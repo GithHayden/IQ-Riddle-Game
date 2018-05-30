@@ -1,13 +1,16 @@
 <html>
     <head>
-        <title>Game Homepage</title>
+        <!-- Web Browser Title -->
+        <title>Flask-Python Game</title>
     </head>
     
+    
+        <!-- Webpage Main Body --> 
     <body>
         <nav>
             <ul>
-                <li><a href = "/">Game Homepage</a></li>
-                <li><a href = "/contact">Contact Developer</a></li>
+                <li><a href = "{{ url_for('index') }}">Game</a></li>
+                <li><a href = "{{ url_for('contact') }}">Contact Developer</a></li>
             </ul>
         </nav>
         

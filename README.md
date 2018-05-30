@@ -34,7 +34,8 @@ A **Multi-Player Guessing Game** that asks player/s to guess the answer to a pic
     - Python Unittest module. Ensures program runs correctly, if not, unittest will show you where code is not working. 'python3 -m unittest', to run tests
 * Manual Testing: 
     - Describe the process by which you made sure that the functionality all works as intended.
-            E.g. Ongoing checking via 'Run' & executing code via Linux Terminal.
+            Flask Build - Ongoing checking via 'Run'.
+            Executing code via Linux Terminal.
     - Structure around the list of scenarios - e.g. I clicked on the Videos link in the navbar, then clicked play to verify that the video plays correctly and clicked download to verify that I could download it to my computer.
     - Ensure site is as responsive as possible, test on different size devices.
 * Bugs:
