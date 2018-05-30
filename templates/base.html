@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <!-- Web Browser Title -->
+        <title>Flask-Python Game</title>
+    </head>
+  
+  
+        <!-- Webpage Main Body -->  
+    <body>
+        <nav>
+            <ul>
+        <!-- Navigation bar names with template logic code inside curly brackets --> 
+                <li><a href = "{{ url_for('index') }}">Game</a></li>
+                <li><a href = "{{ url_for('contact') }}">Contact Developer</a></li>
+            </ul>
+        </nav>
+        
+        {% block content %}
+        {% endblock %}
+        
+    </body>
+</html>
