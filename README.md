@@ -1,9 +1,10 @@
-![Alt text](https://udemy-images.udemy.com/course/750x422/913448_e6e2.jpg)
-### Flask-Python Game
-A **Multi-Player Guessing Game** that asks player/s to guess the answer to a text-based riddle.
+![Alt text](https://ak4.picdn.net/shutterstock/videos/16982824/thumb/1.jpg?i10c=img.resize(height:160))
+
+### IQ Question Game
+A game that asks player/s to input the answer to IQ based questions.
 
 ### Game Instructions
-1. Player/s are presented with an image or text that contains the riddle.
+1. Player/s are presented with text that contains the question.
 2. Player/s enter their answer into a text area and submit their answer using a form.
 3. If a player guesses correctly, they are redirected to the next riddle.
 4. If a player guesses incorrectly, their incorrect guess is stored and printed below the riddle. The text area is cleared so they can guess again.
