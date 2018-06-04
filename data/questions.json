@@ -1,0 +1,53 @@
+[
+  {
+    "name": "question_0",
+    "description": "I have one letter but my name is spelled with eight. What am I?",
+    "answer": "evelope"
+  },
+  {
+    "name": "question_1",
+    "description": "Swap one letter from each of the words "Right" and "Blight" to make two related words.",
+    "answer": "light and bright"
+  },
+  {
+    "name": "question_2",
+    "description": "I can fill up an entire room and still not take up any space. Who am I?",
+    "answer": "light"
+  },
+  {
+    "name": "question_3",
+    "description": "I am a two digit even number. I am a square of a number, and also a cube of another number. Who am I?",
+    "answer": "64"
+  },
+  {
+    "name": "question_4",
+    "description":
+      "I am 3/8 of Tortoise, 2/5 of Onion and 2/6 of Tomato. Who am I?",
+    "answer": "toronto"
+  },
+  {
+    "name": "question_5",
+    "description": "I am a drink. I am also an alphabet? Who am I?",
+    "answer": "t"
+  },
+  {
+    "name": "question_6",
+    "description": "I cannot speak but I tell everything. I am not a tree but I have leaves. I have hinges but I am neither a door nor a window. Who am I?",
+    "answer": "book"
+  },
+  {
+    "name": "question_7",
+    "description": "I don't have legs but I have hands. I can run but I can't walk. Who am I?",
+    "answer": "clock"
+  },
+  {
+    "name": "question_8",
+    "description": "I have a thumb and four fingers, but I have no flesh or bone. Who am I?",
+    "answer": "gloves"
+  },
+  {
+    "name": "question_9",
+    "description": "I start with T and end with T and have T in me. Who am I?",
+    "answer": "teapot"
+  }
+]

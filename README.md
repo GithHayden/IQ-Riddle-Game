@@ -1,8 +1,8 @@
 ![Alt text](https://udemy-images.udemy.com/course/750x422/913448_e6e2.jpg)
-### Flask-Python Game *** Update Photo/Name ***
-A **Multi-Player Guessing Game** that asks player/s to guess the answer to a pictorial or text-based riddle.
+### Flask-Python Game
+A **Multi-Player Guessing Game** that asks player/s to guess the answer to a text-based riddle.
 
-### Functionalities
+### Game Instructions
 1. Player/s are presented with an image or text that contains the riddle.
 2. Player/s enter their answer into a text area and submit their answer using a form.
 3. If a player guesses correctly, they are redirected to the next riddle.
@@ -23,6 +23,7 @@ A **Multi-Player Guessing Game** that asks player/s to guess the answer to a pic
 * Chrome Dev Tools: Ongoing inspection of elements and to perform final UAT.
 * Heroku: Final Project Deployment.
 * Commentary: Check code clearly commented and update where required.
+* Riddle Question Source/s: 
 
 ### Build Deployment
 * Spellcheck
@@ -34,6 +35,7 @@ A **Multi-Player Guessing Game** that asks player/s to guess the answer to a pic
 * Manual Testing: 
     - Describe the process by which you made sure that the functionality all works as intended.
             Flask Build - Ongoing checking via 'Run'.
+            Resposive Testing.
             Executing code via Linux Terminal.
     - Structure around the list of scenarios - e.g. I clicked on the Videos link in the navbar, then clicked play to verify that the video plays correctly and clicked download to verify that I could download it to my computer.
     - Ensure site is as responsive as possible, test on different size devices.
@@ -48,6 +50,15 @@ A **Multi-Player Guessing Game** that asks player/s to guess the answer to a pic
 
 ### Final Deployment
 * Heroku: Deploy final version of code. Provide instructions on how project was deployed to Heroku.
+
+1. Blank `Cloud 9` workspace created. Folders set up and files uploaded/created in line with wireframe.
+2. `index.html`, `graph.js` and `style.css` updated in parallel. HTML, CSS, and JavaScript code written for each section. See code commentary for detailed guidance.
+3. UAT: Final web design inspected via `Cloud 9`, `Run`. Responsive web design tested via `Chrome Dev Tools`, `Toggle Device Toolbar`. ``` D3 data visualisation is non-responsive and built for large screens``` therefore, `Bootstrap` containers ONLY are responsive.
+4. Staged Project Backup: Pushed to `GitHub` repo via `Linux` terminal in incremental stages.
+
+Final Project Backup: Pushed to `GitHub` repo via `Linux` terminal.
+Deployed via GitHub Pages: [insert heroku link to view app]
+
 
 ### Developer 'To Do' Notes
 
