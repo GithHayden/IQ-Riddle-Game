@@ -48,6 +48,7 @@ A game that asks player/s to input the answer to IQ based questions.
     Unable to get code working in browser - spelled end block, which should have been one word i.e. endblock.
     'Contact Developer' missing: Typo in page_heading, fixed by correcting/aligning wording conventions.
     Forgot 'secret_key' leading to error code, fixed by adding to run.py.
+    Design issues getting appropriately sized photo to align with app.
 
 ### Final Deployment
 * Heroku: Deploy final version of code. Provide instructions on how project was deployed to Heroku.

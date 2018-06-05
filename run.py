@@ -9,7 +9,7 @@ app.secret_key = 'a_secret'
 @app.route('/')
 def index():
     '''Routing view to render/call index.html in browser'''
-    return render_template("index.html", page_heading="Game")
+    return render_template("index.html", page_heading="Enter Player Name")
     
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
