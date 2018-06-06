@@ -1,13 +1,22 @@
 <!-- Template logic inheriting from base.html  -->
 {% extends 'base.html' %} {% block content %}
-<h2>{{ page_heading }}</h2>
 
-    <div>
-        <!-- Form -->
-        <form method="POST" class="form-inline">
-            <input type="text" class="form-control" placeholder="Player Name" name="player_name" id="player_name" autofocus>
-            <button class="btn btn-danger">Start Game</button>
-        </form>
-    </div>
+
+<div class="mx-auto" style="width: 425px;">
+    <h2>Enter Player Name</h2>
+    <p></p>
+</div>
+
+<div class="mx-auto" style="width: 325px;">
+    <!-- FORM -->
+    <form method="POST" class="form-inline">
+        <input type="text" class="form-control" placeholder="player name" name="username" id="username" autofocus>
+        <p></p>
+</div>
+
+<div class="mx-auto" style="width: 265px;">
+    <button class="btn btn-primary">Start Game</button>
+    </form>
+</div>
 
 {% endblock %}

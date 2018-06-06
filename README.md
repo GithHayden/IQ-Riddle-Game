@@ -1,7 +1,7 @@
 ![Alt text](https://ak4.picdn.net/shutterstock/videos/16982824/thumb/1.jpg?i10c=img.resize(height:160))
 
 ### IQ Question Game
-A game that asks player/s to input the answer to IQ based questions.
+A game that asks player/s to input the answer to IQ text based questions.
 
 ### Game Instructions
 1. Player/s are presented with text that contains the question.
@@ -49,6 +49,7 @@ A game that asks player/s to input the answer to IQ based questions.
     'Contact Developer' missing: Typo in page_heading, fixed by correcting/aligning wording conventions.
     Forgot 'secret_key' leading to error code, fixed by adding to run.py.
     Design issues getting appropriately sized photo to align with app.
+    Enter Player Name = Error 'Method Not Allowed. The method is not allowed for the requested URL'. Python write to files not within run.py.
 
 ### Final Deployment
 * Heroku: Deploy final version of code. Provide instructions on how project was deployed to Heroku.
