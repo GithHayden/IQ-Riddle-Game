@@ -23,19 +23,19 @@ def get_all_users():
     return users    
     
 def add_messages(username, message):
-    write_to_file("data/messages.txt", "({0}) - {1}\n".format(
+    write_to_file("data/incorrect_answers.txt", "({0}) - {1}\n".format(
             username.title(),
             message))
 
 def get_all_messages():
     messages = []
-    with open("data/messages.txt", "r") as chat_messages:
+    with open("data/incorrect_answers.txt", "r") as chat_messages:
         messages = [row for row in chat_messages if len(row.strip()) > 0]
     return messages
     
 @app.route('/users/online', methods=["GET"])
 def online_users():
-    online_users_file = open("data/online_users.txt")
+    online_users_file = open("data/game_players.txt")
     online_users = [row for row in online_users_file if len(row.strip()) > 0]
     online_users_file.close()
 
@@ -48,7 +48,7 @@ def index():
     # POST request
     if request.method == "POST":
         write_to_file("data/players.txt", request.form["username"] + "\n")
-        write_to_file("data/online_users.txt", request.form["username"] + "\n")
+        write_to_file("data/game_players.txt", request.form["username"] + "\n")
         return redirect(request.form["username"])
         
     return render_template("index.html", page_heading="Play Game")
@@ -67,7 +67,7 @@ def user(username):
     if request.method == "POST":
         # Add user to online users file because he is removed when he attempts to post his answer
         # as page considers him unloading the page
-        write_to_file("data/online_users.txt", username + "\n")
+        write_to_file("data/game_players.txt", username + "\n")
 
         # Get riddle index from hidden field passed in form
         riddle_index = int(request.form["riddle_index"])
@@ -92,7 +92,7 @@ def user(username):
 
     messages = get_all_messages()
 
-    online_users_file = open("data/online_users.txt")
+    online_users_file = open("data/game_players.txt")
     online_users = [row for row in online_users_file if len(row.strip()) > 0]
     online_users_file.close()
 
@@ -117,11 +117,11 @@ def send_message(username, message):
 
 @app.route('/<username>/log_off', methods=["POST"])
 def log_user_off(username):
-    online_users_file = open("data/online_users.txt")
+    online_users_file = open("data/game_players.txt")
     online_users = [row for row in online_users_file if len(row.strip()) > 0 and row.strip() != username]
     online_users_file.close()
 
-    with open("data/online_users.txt", "w") as online_users_file:
+    with open("data/game_players.txt", "w") as online_users_file:
         for user in online_users:
             online_users_file.write('%s\n' % user)
 
