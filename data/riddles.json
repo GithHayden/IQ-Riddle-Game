@@ -1,0 +1,71 @@
+[
+  {
+    "name": "riddle_0",
+    "description": "Riddle 1 of 12: Give me food, and I will live. Give me water, and I will die. What am I?",
+    "answer": "fire"
+  },
+  {
+    "name": "riddle_1",
+    "description": "Riddle 2 of 12: What is full of holes, but can still hold water?",
+    "answer": "sponge"
+  },
+  {
+    "name": "riddle_2",
+    "description": "Riddle 3 of 12: A farmer has 17 sheep, all but nine die. How many are left?",
+    "answer": "9"
+  },
+  {
+    "name": "riddle_3",
+    "description": "Riddle 4 of 12: Mike is a butcher. He is 5’10” tall. What does he weigh?",
+    "answer": "meat"
+  },
+  {
+    "name": "riddle_4",
+    "description":
+      "Riddle 5 of 12: John needs 13 bottles of water from the store. John can only carry 3 at a time. What's the minimum number of trips John needs to make to the store?",
+    "answer": "5"
+  },
+  {
+    "name": "riddle_5",
+    "description": "Riddle 6 of 12: Finger is to Hand, as Leaf is to:",
+    "answer": "twig"
+  },
+  {
+    "name": "riddle_6",
+    "description": "Riddle 7 of 12: Mary, who is 16 years old, is 4 times as old as her brother. How old will Mary be, when she is twice as old as her brother?",
+    "answer": "24"
+  },
+  {
+    "name": "riddle_7",
+    "description": "Riddle 8 of 12: Which one of the 5 is least like the other 4 - Dog, Mouse, Lion, Snake, Elephant?",
+    "answer": "snake"
+  },
+  {
+    "name": "riddle_8",
+    "description": "Riddle 9 of 12: Book is to Reading as Fork is to:",
+    "answer": "eating"
+  },
+  {
+    "name": "riddle_9",
+    "description": "Riddle 10 of 12: Forest is to tree as tree is to:",
+    "answer": "leaf"
+  },
+  {
+    "name": "riddle_10",
+    "description":
+      "Riddle 11 of 12: At a conference, 12 members shook hands with each other before & after the meeting. How many total number of hand shakes occurred?",
+    "answer": "132"
+  },
+  {
+    "name": "riddle_11",
+    "description": "Riddle 12 of 12: What has a mouth, but cannot eat. Moves, but has no legs. Has a bank, but cannot put money in it?",
+    "answer": "river"
+  },
+    {
+    "name": "riddle_12",
+    "description": "",
+    "answer": ""
+  }
+]
+
+

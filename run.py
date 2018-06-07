@@ -59,7 +59,7 @@ def index():
 def user(username):
     """Display chat messages"""
     data = []
-    with open("data/company.json", "r") as json_data:
+    with open("data/riddles.json", "r") as json_data:
         data = json.load(json_data)
 
     riddle_index = 0
@@ -97,7 +97,7 @@ def user(username):
     online_users_file.close()
 
     return render_template("startgame.html",
-                            username=username, chat_messages=messages, company_data=data, online_users=online_users, riddle_index=riddle_index)
+                            username=username, chat_messages=messages, riddles_data=data, online_users=online_users, riddle_index=riddle_index)
 
 @app.route('/players', methods=["GET", "POST"])
 def players(username):
