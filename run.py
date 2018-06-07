@@ -21,6 +21,7 @@ def index():
     # POST request
     if request.method == "POST":
         write_to_file("data/players.txt", request.form["username"] + "\n")
+        
     return render_template("index.html", page_heading="Play Game")
     
 @app.route('/contact', methods=["GET", "POST"])
@@ -28,8 +29,8 @@ def contact():
     if request.method == "POST":
         '''Routing view to render/call contact.html in browser'''
         flash("Thank you {} for your message, we will respond soon.".format(
-            request.form["name"]
-        ))
+            request.form["name"]))
+            
     return render_template("contact.html")
 
 if __name__== '__main__':
