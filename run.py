@@ -8,9 +8,19 @@ app.secret_key = 'a_secret'
 
 data = []
 
-@app.route('/')
+def write_to_file(filename, data):
+    with open(filename, "a") as file:
+        file.writelines(data)
+
+def add_users(username):
+    write_to_file("data/players.txt","({0})-{1}\n".format(username.title()))
+    
+@app.route('/', methods=["GET", "POST"])
 def index():
     '''Routing view to render/call index.html in browser'''
+    # POST request
+    if request.method == "POST":
+        write_to_file("data/players.txt", request.form["username"] + "\n")
     return render_template("index.html", page_heading="Play Game")
     
 @app.route('/contact', methods=["GET", "POST"])
