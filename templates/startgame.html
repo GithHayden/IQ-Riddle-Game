@@ -1,51 +1,44 @@
 <!-- Template logic inheriting from base.html  -->
 {% extends 'base.html' %} {% block content %}
 
-
 <body>
 
+    <div class="row"></div>
     <!-- Welcome message -->
-    <div class="text-center" style="width: 1250px; height: 50px">
+    <div class="col-12 text-center">
         <h4 class="username">Hello {{username}}, input your answer (lowercase text or a number) and select submit.</h4>
     </div>
 
+    <div class="row" style="height: 10px"></div>
     <!-- Riddles questions and answers, json data-->
-    <div class="text-center" style="width: 1250px; height: 75px">
+    <div class="col-12 text-center" style="color:grey">
         <h5> {{ riddles_data[riddle_index]["description"] }} </h5>
     </div>
 
-
-
-
-    <div class="row">
+    <div class="row" style="height: 500px">
         <!-- Player name heading and list of names -->
-        <div class="col">
+        <div class="col-4">
             <h5>Player/s</h5>
-            <ol>
-                {% for user in online_users %}
-                <li>{{user}}</li>
-                {% endfor %}
-            </ol>
+            {% for user in game_players %}
+            <li>{{user}}</li>
+            {% endfor %}
         </div>
         <div class="col">
+            <!-- Enter answer form -->
             <form method="POST" class="form-inline">
                 <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
                 <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
                 <button class="btn btn-basic">Submit</button>
             </form>
         </div>
+        <!-- Incorrect answers player name/s and answer/s -->
         <div class="col">
-            3 of 3
+            <h5>Incorrect Answers</h5>
+            {% for message in incorrect_answers %}
+            <li>{{message}}</li>
+            {% endfor %}
         </div>
     </div>
-
-
-
-
-
 </body>
 
 {% endblock %}
-
-
-<!-- <div class="mx-auto" style="width: 1250px; height: 75px"> -->

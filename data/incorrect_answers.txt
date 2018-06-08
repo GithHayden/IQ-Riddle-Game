@@ -9,3 +9,9 @@
 (Player1) - guess incorrect
 
 (Templates) - startgame.html
+(Player10) - water
+
+(Player10) - water
+
+(Ann) - tree
+

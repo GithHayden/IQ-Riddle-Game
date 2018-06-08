@@ -51,6 +51,8 @@ A game that asks player/s to input the answer to IQ text based questions.
     Design issues getting appropriately sized photo to align with app.
     Enter Player Name = Error 'Method Not Allowed. The method is not allowed for the requested URL'. Python write to files not within run.py.
     ValueError - json data not reading/throwing up error. Fixed jason code, remove comma at end of last closing curly bracket.
+    duplicated data writing to player names and incorrect answers. Fixed by...
+    Spacing/data hugging too closely between divs.
 
 ### Final Deployment
 * Heroku: Deploy final version of code. Provide instructions on how project was deployed to Heroku.

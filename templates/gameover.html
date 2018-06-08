@@ -1,18 +1,14 @@
 <!-- Template logic inheriting from base.html  -->
 {% extends 'base.html' %} {% block content %}
 
-<div class="main">
-    <div class="overlay">
-        <div class="container">
-            <h1 class="title">Game finished! </h1>
-            <h2 class="sub">Thanks for playing the Riddle game... </h2>
-            <br>
-            <a href="/ ">
-                <h2 class="sub">I want to play again!</h2>
-            </a>
+<body>
+    <div class="row">
+        <!-- Game over message -->
+        <div class="col-12 text-center">
+            <h1>Congratulations, you've answered all 12 riddles correctly. Select GAME to play again.</h1>
         </div>
     </div>
 
+</body>
 
-
-    {% endblock %}
+{% endblock %}

@@ -28,17 +28,17 @@ def add_messages(username, message):
 
 def get_all_messages():
     messages = []
-    with open("data/incorrect_answers.txt", "r") as chat_messages:
-        messages = [row for row in chat_messages if len(row.strip()) > 0]
+    with open("data/incorrect_answers.txt", "r") as incorrect_answers:
+        messages = [row for row in incorrect_answers if len(row.strip()) > 0]
     return messages
     
 @app.route('/users/online', methods=["GET"])
-def online_users():
-    online_users_file = open("data/game_players.txt")
-    online_users = [row for row in online_users_file if len(row.strip()) > 0]
-    online_users_file.close()
+def game_players():
+    game_players_file = open("data/game_players.txt")
+    game_players = [row for row in game_players_file if len(row.strip()) > 0]
+    game_players_file.close()
 
-    return jsonify(online_users)    
+    return jsonify(game_players)    
     
 
 @app.route('/', methods=["GET", "POST"])
@@ -86,17 +86,17 @@ def user(username):
             add_messages(username, user_response + "\n")
 
     if request.method == "POST":
-        if user_response == "blueberry" and riddle_index > 10:
+        if user_response == "river" and riddle_index > 10:
             return render_template("gameover.html")
 
     messages = get_all_messages()
 
-    online_users_file = open("data/game_players.txt")
-    online_users = [row for row in online_users_file if len(row.strip()) > 0]
-    online_users_file.close()
+    game_players_file = open("data/game_players.txt")
+    game_players = [row for row in game_players_file if len(row.strip()) > 0]
+    game_players_file.close()
 
     return render_template("startgame.html",
-                            username=username, chat_messages=messages, riddles_data=data, online_users=online_users, riddle_index=riddle_index)
+                            username=username, incorrect_answers=messages, riddles_data=data, game_players=game_players, riddle_index=riddle_index)
 
 @app.route('/players', methods=["GET", "POST"])
 def players(username):
@@ -116,13 +116,13 @@ def send_message(username, message):
 
 @app.route('/<username>/log_off', methods=["POST"])
 def log_user_off(username):
-    online_users_file = open("data/game_players.txt")
-    online_users = [row for row in online_users_file if len(row.strip()) > 0 and row.strip() != username]
-    online_users_file.close()
+    game_players_file = open("data/game_players.txt")
+    game_players = [row for row in game_players_file if len(row.strip()) > 0 and row.strip() != username]
+    game_players_file.close()
 
-    with open("data/game_players.txt", "w") as online_users_file:
-        for user in online_users:
-            online_users_file.write('%s\n' % user)
+    with open("data/game_players.txt", "w") as game_players_file:
+        for user in game_players:
+            game_players_file.write('%s\n' % user)
 
     return;    
     
