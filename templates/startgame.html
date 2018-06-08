@@ -6,7 +6,7 @@
     <div class="row"></div>
     <!-- Welcome message -->
     <div class="col-12 text-center">
-        <h4 class="username">Hello {{username}}, input your answer and select submit.</h4>
+        <h3 class="username">Hello {{username}}, please input your answer and select submit.</h3>
     </div>
 
     <div class="row" style="height: 10px"></div>
@@ -15,30 +15,38 @@
         <h5> {{ riddles_data[riddle_index]["description"] }} </h5>
     </div>
 
-    <div class="row" style="padding-top: 50px;">
+    <div class="row" style="padding-top: 20px; padding-left: 50px">
         <!-- Player name heading and list of names -->
-        <div class="col" style="padding-left: 125px;">
-            <h5>Player/s</h5>
-            {% for user in game_players %}
-            <li>{{user}}</li>
-            {% endfor %}
+        <div class="col-4" style="padding-left:0px;">
+            <h4>Player/s</h4>
+            <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
+                {% for user in game_players %}
+                <h6>
+                    <li class="list-unstyled">{{user}}</li>
+                </h6>
+                {% endfor %}
+            </div>
         </div>
-        <div class="col" style="padding-right: 50px;">
+        <div class="col-4" style="padding-top: 50px; padding-left: 50px">
             <!-- Enter answer form -->
             <form method="POST" class="form-inline">
                 <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
                 <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
-                    <p style="padding-left: 50px">
-                        <button class="btn btn-basic">Submit</button>
-                    </p>
+                <p style="padding-left: 50px">
+                    <button class="btn btn-basic">Submit</button>
+                </p>
             </form>
         </div>
         <!-- Incorrect answers player name/s and answer/s -->
-        <div class="col">
-            <h5>Incorrect Answers</h5>
-            {% for message in incorrect_answers %}
-            <li>{{message}}</li>
-            {% endfor %}
+        <div class="col-4">
+            <h4>Incorrect Answer/s</h4>
+            <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
+                {% for message in incorrect_answers %}
+                <h6>
+                    <li class="list-unstyled">{{message}}</li>
+                </h6>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>
