@@ -1,88 +1,21 @@
 <!-- Template logic inheriting from base.html  -->
 {% extends 'base.html' %} {% block content %}
 
-    <!-- Question -->
-    <div class="main">
-        <div class="overlay">
-            <div class="container" style="max-width: 1000px;">
-                <a href="/ ">
-                </a>
-                <h3 class="username">{{username}}, type your answer (lowercase text or a number) and select submit</h3>
-                <div class="mailing-list">
-                    <!-- Json Data-->
-                    <h3 class="riddle"> {{ riddles_data[riddle_index]["description"] }} </h3>
-                </div>
-            </div>
 
-            <div class="container">
-                <!-- Player name box -->
-                <div class="col-md-4">
-                            <h3 class="panel-title">Player/s</h3>
-                        </div>
-                        <!-- Player name list -->
-                        <div class="panel-body msg_container_base">
-                            {% for user in online_users %}
-                            <li class="bullets">{{user}}</li>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form -->
-                <div class="col-md-4">
-                    <form method="POST" class="form-inline">
-                        <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
-                        <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
-                        <button class="btn btn-basic">Submit</button>
-                    </form>
-                </div>
-                <!-- Incorrect answers box -->
-                <div class="col-md-4">
-                            <h3 class="panel-title">Incorrect Answers</h3>
-                        </div>
-                        <!-- Wrong answers lists -->
-                        <div class="panel-body msg_container_base">
-                            {% for message in chat_messages %}
-                            <li class="bullets">{{message}}</li>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+<body>
+    <!-- Welcome message and Riddle -->
+    <div class="text-center" style="width: 1250px; height: 50px">
+        <h4 class="username">Hello {{username}}, input your answer (all lowercase text or a number) and select submit.</h4>
     </div>
 
-    <script type="text/javascript">
-        window.onbeforeunload = function (e) {
-            $.post(window.location.href + '/log_off');
-            return undefined;
-        }
-    </script>
+    <!-- riddles.json data-->
+    <div class="text-center" style="width: 1250px; height: 75px">
+        <h5> {{ riddles_data[riddle_index]["description"] }} </h5>
+    </div>
 
-    <script type="text/javascript">
-        setInterval(function () {
-            $.getJSON({
-                url: "/users/online",
-                success: function (data) {
-                    onlineUsersList = document.getElementById("online-users-list");
-                    onlineUsersList.innerHTML = '';
-                    for (var i = 0; i < data.length; i++) {
-                        var li = document.createElement("li style="list - style - type: none; ");
-                        li.appendChild(document.createTextNode(data[i]));
-                        onlineUsersList.appendChild(li);
-                    }
-                }
-            });
-        }, 5000);
-    </script>
-
-    <!-- Box autoscroll -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".msg_container_base").stop().animate({ scrollTop: $(".msg_container_base")[0].scrollHeight }, 500);
-        });
-    </script>
+</body>
 
 {% endblock %}
+
+
+<!-- <div class="mx-auto" style="width: 1250px; height: 75px"> -->

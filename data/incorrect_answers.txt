@@ -8,3 +8,4 @@
 
 (Player1) - guess incorrect
 
+(Templates) - startgame.html

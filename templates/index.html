@@ -1,23 +1,25 @@
 <!-- Template logic inheriting from base.html  -->
 {% extends 'base.html' %} {% block content %}
 
-<!-- Game page heading --!>
-<div class="mx-auto" style="width: 330px;">
-    <h2>Enter Player Name</h2>
-    <p></p>
-</div>
+<body>
+    
+    <!-- Game page heading --!>
+    <div class="mx-auto" style="width: 350px; height: 100px">
+        <h2>Enter Player Name</h2>
+    </div>
 
 <!-- Enter player name form -->
-<div class="mx-auto" style="width: 250px;">
-    <form method="POST" class="form-inline">
-        <input type="text" class="form-control" placeholder="player name" name="username" id="username" autofocus>
-        <p></p>
-</div>
+    <div class="mx-auto" style="width: 250px; height: 100px">
+        <form method="POST" class="form-inline">
+            <input type="text" class="form-control" placeholder="player name" name="username" id="username" autofocus>
+    </div>
 
-<!-- Start game button -->
-<div class="mx-auto" style="width: 193px;">
-    <button class="btn btn-basic">Start Game</button>
-    </form>
-</div>
+    <!-- Start game button -->
+    <div class="mx-auto" style="width: 200px; height: 50px">
+        <button class="btn btn-basic">Start Game</button>
+        </form>
+    </div>
+
+</body>
 
 {% endblock %}
