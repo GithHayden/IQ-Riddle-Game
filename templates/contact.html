@@ -1,10 +1,12 @@
-<!-- Template logic inheriting from base.html  -->
+<!-- Code with curley brackets is flask and flask template logic which inherits code from base.html. -->
 {% extends 'base.html' %} {% block content %}
 
+<!-- Contact form header -->
 <div class="mx-auto" style="width: 425px;">
     <h2>Contact Developer</h2>
 </div>
 
+<!-- Contact form -->
 <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
         {% with messages = get_flashed_messages() %} {% if messages %}

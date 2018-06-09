@@ -1,25 +1,21 @@
-<!-- Template logic inheriting from base.html  -->
+<!-- Code with curley brackets is flask and flask template logic which inherits code from base.html. -->
 {% extends 'base.html' %} {% block content %}
 
-<body>
+<!-- Game page heading -->
+<div class="mx-auto" style="width: 350px; height: 100px">
+    <h2>Enter Player Name</h2>
+</div>
 
-    <!-- Game page heading -->
-    <div class="mx-auto" style="width: 350px; height: 100px">
-        <h2>Enter Player Name</h2>
-    </div>
+<!-- Enter player name form -->
+<div class="mx-auto" style="width: 250px; height: 100px">
+    <form method="POST" class="form-inline">
+        <input type="text" class="form-control" placeholder="player name" name="username" id="username" autofocus>
+</div>
 
-    <!-- Enter player name form -->
-    <div class="mx-auto" style="width: 250px; height: 100px">
-        <form method="POST" class="form-inline">
-            <input type="text" class="form-control" placeholder="player name" name="username" id="username" autofocus>
-    </div>
-
-    <!-- Start game button -->
-    <div class="mx-auto" style="width: 200px; height: 50px">
-        <button class="btn btn-basic">Start Game</button>
-        </form>
-    </div>
-
-</body>
+<!-- Start game button -->
+<div class="mx-auto" style="width: 200px; height: 50px">
+    <button class="btn btn-basic">Start Game</button>
+    </form>
+</div>
 
 {% endblock %}

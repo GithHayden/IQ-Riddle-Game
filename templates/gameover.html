@@ -1,17 +1,14 @@
-<!-- Template logic inheriting from base.html  -->
+<!-- Code with curley brackets is flask and flask template logic which inherits code from base.html. -->
 {% extends 'base.html' %} {% block content %}
 
-<body>
-    <div class="row">
-        <!-- Game over message -->
-        <div class="col-12 text-center" style="padding-top:50px">
-            <h1>
-                <p>Congratulations, you've answered all 12 riddles.</p>
-                <p>Select GAME to play again.</p>
-            </h1>
-        </div>
+<div class="row">
+    <!-- Game over message -->
+    <div class="col-12 text-center" style="padding-top:50px">
+        <h1>
+            <p>Congratulations, you've answered all 12 riddles.</p>
+            <p>Select GAME to play again.</p>
+        </h1>
     </div>
-
-</body>
+</div>
 
 {% endblock %}

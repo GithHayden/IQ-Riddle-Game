@@ -13,7 +13,8 @@ def write_to_file(filename, data):
         file.writelines(data)
 
 def add_users(username):
-    write_to_file("data/players.txt","({0})-{1}\n".format(username.title()))
+    write_to_file("data/players.txt","({0})-{1}\n".format
+        (username.title()))
     
 def get_all_users():
     users = []
@@ -34,12 +35,12 @@ def get_all_messages():
     
 @app.route('/users/online', methods=["GET"])
 def game_players():
+    '''Routing view for players after name is input'''
     game_players_file = open("data/game_players.txt")
     game_players = [row for row in game_players_file if len(row.strip()) > 0]
     game_players_file.close()
 
     return jsonify(game_players)    
-    
 
 @app.route('/', methods=["GET", "POST"])
 def index():
@@ -56,7 +57,7 @@ def index():
     
 @app.route('/<username>', methods=["GET", "POST"])
 def user(username):
-    """Display chat messages"""
+    """Display json data"""
     data = []
     with open("data/riddles.json", "r") as json_data:
         data = json.load(json_data)
@@ -64,25 +65,23 @@ def user(username):
     riddle_index = 0
 
     if request.method == "POST":
-        # Add user to online users file because he is removed when he attempts to post his answer
-        # as page considers him unloading the page
+        # Add user to game_players.txt file.
         write_to_file("data/game_players.txt", username + "\n")
 
-        # Get riddle index from hidden field passed in form
+        # Get riddle index from hidden field passed in form.
         riddle_index = int(request.form["riddle_index"])
 
-        # Get the user response from input field filled by user
-        # We turn the answer to lower case because all answers are in lower case
-        # so that SNOWBALLS can be as correct as snowballs
+        # Retrieve player response from input field completed by player.
+        # Convert answer to lowercase to accept uppercase as correct answer.
         user_response = request.form["message"].lower()
 
-        # Compare the user's answer to the correct answer of the riddle
+        # Compare player/s answer to the correct answer.
         if data[riddle_index]["answer"] == user_response:
             # Correct answer
             # Go to next riddle
             riddle_index += 1
         else:
-            # Incorrect answer
+            # Incorrect answer.
             add_messages(username, user_response + "\n")
 
     if request.method == "POST":
@@ -100,8 +99,7 @@ def user(username):
 
 @app.route('/players', methods=["GET", "POST"])
 def players(username):
-    """Display chat historical of players"""
-
+    """Display history of players"""
     if request.method == "POST":
         add_users(username, request.form["user"] + "\n")
     users = get_all_users()

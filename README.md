@@ -9,13 +9,12 @@ A game that asks player/s to input the answer to IQ text based questions.
 3. If a player guesses correctly, they are redirected to the next riddle.
 4. If a player guesses incorrectly, their incorrect guess is stored and printed below the riddle. The text area is cleared so they can guess again.
 5. Multiple players can play an instance of the game at the same time. Players are identified by a unique username.
-6. A leader board displays ranks and top scores for all users.
 
 ### Technologies
 
 * Cloud 9: `Integrated Development Environment` used to build end to end.
 * Cloud 9 Linux Terminal: Backup project via incremental `Git Commit` commands.
-* Bootstrap CSS: Maintain clear separation between the library code and your code. Explain what code was kept and how it was changed to fit your need.
+* Bootstrap CSS: Static folder is Bootstrap, base body/contact form was copied from Bootstrap. All other code is project owners, freehand and retrieved from online forums. Maintain clear separation between the library code and your code. Explain what code was kept and how it was changed to fit your need.
 * Flask: Use to run game.
 * Python: Use to write the logic of the game, including TDD (Test Driven Development).
 * Main HTML: Use to enhance look and feel of the game.
@@ -53,6 +52,8 @@ A game that asks player/s to input the answer to IQ text based questions.
     ValueError - json data not reading/throwing up error. Fixed jason code, remove comma at end of last closing curly bracket.
     duplicated data writing to player names and incorrect answers. Fixed by...
     Spacing/data hugging too closely between divs.
+    Updated commentary to state that code within {{ }} is flask code. Error running app. Fied by changing {{ }} to 'curley brackets'.
+    Player name writing to list with every answer submitted, duplicated data rendering. Fix.
 
 ### Final Deployment
 * Heroku: Deploy final version of code. Provide instructions on how project was deployed to Heroku.
@@ -72,5 +73,8 @@ Deployed via GitHub Pages: [insert heroku link to view app]
 * Subsequent iterations:
 
     1. Run code through validator/s.
-    2. Review E2E (incl. code commentary). Apply improvements.
+    2. Review E2E (incl. clarity of code by refactoring and code commentary). Apply improvements.
+    3. Increase number of riddles, add automated TDD (Test Driven Development) if drives beneficial.
+    4. Add numercal scoring system and leaderboard ranking all historic players by highest to lowest scores.
+    5. Remove brackets around player name on incorrect answer list, streamline to align styling with players list.
     
