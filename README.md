@@ -12,18 +12,20 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 6. If a player answers all riddles correctly, they are redirected to an end of game message.
 
 ### Technologies
-* Cloud 9: IDE `Integrated Development Environment` used to build project end to end.
-* Cloud 9 Linux Terminal: Used to backup project via incremental `git status, git add (staging area), git commit` commands.
-* Bootstrap: [Bootstrap Clean Blog Template](https://startbootstrap.com/template-overviews/clean-blog/) used to build design upon.
+1. Cloud 9: IDE `Integrated Development Environment` used to build project end to end.
+2. Cloud 9 Linux Terminal: Used to backup project via incremental `git status, git add (staging area), git commit` commands.
+3. Bootstrap: [Bootstrap Clean Blog Template](https://startbootstrap.com/template-overviews/clean-blog/) used to build design upon.
     * Static folder contains Bootstrap files (no other files stored within this folder).
     * base.html and contact.html - most of the html code was copied from the bootstrap index.html and contact.html files.
     * All other project code was compiled by developer from knoweldge and online researching - frequently using stackoverflow.
-* Flask: A python microframework used to run the application.
-* Python: Written on run.py and used to write the logic of the game.
-* HTML files: Used to build the structure of each web application page.
-* Chrome Dev Tools: Used to execute ongoing inspection of application in browser and to perform final UAT, including responsive testing.
-* GitHub: Used to deploy a backup of project.
-* Heroku: Used to deploy final project.
+4. Flask: A python microframework used to run the application.
+5. Python: Written on run.py and used to write the logic of the game.
+6. HTML files: Used to build the structure of each web application page.
+7. JSON file: Used as a database containing riddle questions and answers.
+8. Text files: Used to write and read data e.g. write player name to players.txt when user inputs name on front end.
+9. Chrome Dev Tools: Used to execute ongoing inspection of application in browser and to perform final UAT, including responsive testing.
+10. GitHub: Used to deploy a backup of project.
+11. Heroku: Used to deploy final project.
 
 ### Build Deployment
 1. Workpsace: Blank `Cloud 9` workspace created.
@@ -38,6 +40,7 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 10. Staged Project Backup: Pushed to `GitHub` repo via `Linux` terminal in incremental stages.
 11. Final Project Backup: Pushed to `GitHub` repo via `Linux` terminal.
 12. Deployed via Heroku: 
+13. Test live project end to end including responsive.
 
 ### Testing
 * Manual Testing: 
