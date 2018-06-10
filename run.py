@@ -54,8 +54,6 @@ def index():
         
     return render_template("index.html", page_heading="Play Game")
     
-    
-    
 @app.route('/<username>', methods=["GET", "POST"])
 def user(username):
     """Display json data"""
@@ -98,18 +96,6 @@ def user(username):
     return render_template("startgame.html",
                             username=username, incorrect_answers=messages, riddles_data=data, game_players=game_players, riddle_index=riddle_index)
 
-@app.route('/players', methods=["GET", "POST"])
-def players(username):
-    """Display history of players"""
-    
-    if request.method == "POST":
-        add_users(username, request.form["user"] + "\n")
-        
-    users = get_all_users()
-    return render_template("startgame.html",
-                            username=username)
-
-
 @app.route('/<username>/<message>')
 def send_message(username, message):
     """Create a new message and redirect back to the chat page"""
@@ -125,7 +111,6 @@ def log_user_off(username):
     with open("data/game_players.txt", "w") as game_players_file:
         for user in game_players:
             game_players_file.write('%s\n' % user)
-
     return;    
     
 @app.route('/contact', methods=["GET", "POST"])
