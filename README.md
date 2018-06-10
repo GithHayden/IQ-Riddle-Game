@@ -38,7 +38,7 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 9. Cloud 9 Linux Terminal: Used to backup project via incremental `git status, git add <file/s> (staging area), git commit -m "<commentary>"` commands.
 
 ### Testing
-1. Manual testing, ongoing via `Cloud 9`, `Run`. After all changes, big or small, checked applciation and all functionality running correctly in browser. 
+1. Manual testing, ongoing via `Cloud 9`, `Run`. Post updates, checked applciation and all functionality running correctly in browser. 
 
     1. Index.html: Selected all nav bar menus to verify that all menus operate as intended.
         1. Bug/Expected Output - code not rendering in browser. Issue - At end of html files spelled {% end block %}. Fix - Scanned code and researched online. Updated with no space i.e. {% endblock %}.
@@ -49,27 +49,28 @@ A game that asks player/s to input answer/s to IQ text based riddles.
         6. Bug/Expected Output - terminal displaying error 'socket.error: [Errno 98] Address already in use [closed]'. Issue - didn't select ctrl+c and stop run.py prior to closing workspace, following morning encountered this error. Fix - researched solutions online, used stackoverflow. Ran 'lsof -i :8080' to locate port ID. Then ran sudo kill -9 <process_id> to kill process.
     2. Game: Input a test player name and selected Start Game to verify player is redirected to start the game. Answered questions incorrectly to verify incorrect answers are being stored within the appropriate list. Answered all riddles correctly to verify that the form is cleared, that the player is redirected to the next riddle and when all riddles are answered correctly the player is redirected to the end of game message.
         1. Bug/Expected Output - after inputting answer, browser error 'ValueError'. Issue - json data not reading, throwing up this error. Fix - Scanned json file for irregularities/try to identify issue. Removed comma at end of last closing curly bracket which fixed this bug.
-        2. Bug/Expected Output - during inputting all correct answers, player name is being duplicated within player name list. Issue - [OPEN BUG, NOTED WITHIN TO DO NOTES TO FIX]
+        2. Bug/Expected Output - during inputting all correct answers, player name is being duplicated within player name list. Issue - [DUE TO TIME CONSTRAINTS, LOGGED UNDER TO DO NOTES TO FIX].
         3. Bug/Expected Output - form and button hugging each other too closely. Issue - Bootstrap grid system not implemented. Fix - Added divs and html style code to create spacing.
         4. Bug/Expected Output - after updating commentary, error in browser pointing to {{ curley brackets. Issue - updated commentary to state that the code within {{ }} is flask code. The browser is trying to read this as code. Fix - updated {{ }} to the words, curley brackets.
     3. Contact: Input required data on relevant lines in form and selected send to verify that each line of the form works as expected.
     4. Responsive Testing: Used Chrome Dev tools to inspect application on various device sizes.
-        1. Bug/Expected Output - Startgame.html not responsive and skewed on all but a large screen. Issue - Issue - [OPEN BUG, NOTED WITHIN TO DO NOTES TO FIX]
+        1. Bug/Expected Output - Startgame.html not responsive and skewed on all but a large screen. Issue - Issue - [DUE TO TIME CONSTRAINTS, LOGGED UNDER TO DO NOTES TO FIX].
 
 ### Final Deployment
 1. README.md: Finalised and spell checked.
 2. Backup deployed via Github: [GitHub Backup](https://github.com/GithHayden/IQ-Riddle-Game).
-3. Website Deployed via Heroku: [IQ Riddle Game]()
+3. Website deployed via Heroku: [IQ Riddle Game](https://iq-riddle-game.herokuapp.com/).
 
 ```
-DEPLOY TO HEROKU INSTRUCTIONS
-1.
-2.
-3.
-4.
-5.
-6.
-
+HOW TO DEPLOY APPLICATION TO HEROKU
+1. Login to Heroku, using 'heroku login' command. Input Heroku login details.
+2. Create new Heroku app, using 'heroku apps:create appname' command.
+3. Push project to Heroku, using 'push -u heroku master' command.
+4. Create scale, using 'heroku ps:scale web=1' command.
+5. Login to Heroku and select newly created app.
+6. Select settings. Select'Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
+7. Restart all dynos. From 'More' menu on top right, select 'Restart all dynos'.
+8. View app: In settings, select Domain URL, NOT Git URL.
 
 ```   
 
