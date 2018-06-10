@@ -131,7 +131,7 @@ def contact():
         flash("Thank you {} for your message, we will respond soon.".format(
             request.form["name"]))
             
-    return render_template("contact.html")
+    return render_template("contact.html", page_heading="Contact Developer")
 
 if __name__== '__main__':
     app.run(host=os.environ.get('IP'),
