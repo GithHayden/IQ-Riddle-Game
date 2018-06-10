@@ -13,19 +13,18 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 
 ### Technologies
 1. Cloud 9: IDE `Integrated Development Environment` used to build project end to end.
-2. Cloud 9 Linux Terminal: Used to backup project via incremental `git status, git add <file/s> (staging area), git commit -m "<commentary>"` commands.
-3. Bootstrap: [Bootstrap Clean Blog Template](https://startbootstrap.com/template-overviews/clean-blog/) used as boilerplate design.
+2. Bootstrap: [Bootstrap Clean Blog Template](https://startbootstrap.com/template-overviews/clean-blog/) used as boilerplate design.
     * Static folder: Contains Bootstrap files (no other files stored within this folder).
     * `base.html` and `contact.html` - most of the html code was copied from the bootstrap `index.html` and `contact.html` files.
     * All other code: Compiled by developer from knoweldge and online researching - frequently using stackoverflow, W3 Schools and YouTube videos.
-4. Flask: A python microframework used to build and run the application. Flask offers benficial functionality such as template logic, which allows the `base.html` file to be inherited on other html files via `{% extends 'base.html' %} {% block content %}` code.
-5. Python: Written within `run.py`. Used to write the logic of the game.
-6. HTML files: Used to build the structure of each application page.
-7. JSON file: Used as a database to point to. Contains the riddle questions and answers.
-8. Text files: Used to write and read data via python back end code e.g. write player name to `players.txt` when player inputs name on form.
-9. Chrome Dev Tools: Used to execute inspection of application in browser and to perform final UAT, including responsive testing.
-10. GitHub: Used to deploy a backup of project.
-11. Heroku: Used to deploy and host final project.
+3. Flask: A python microframework used to build and run the application. Flask offers benficial functionality such as template logic, which allows the `base.html` file to be inherited on other html files via `{% extends 'base.html' %} {% block content %}` code.
+4. Python: Written within `run.py`. Used to write the logic of the game.
+5. HTML files: Used to build the structure of each application page.
+6. JSON file: Used as a database to point to. Contains the riddle questions and answers.
+7. Text files: Used to write and read data via python back end code e.g. write player name to `players.txt` when player inputs name on form.
+8. Chrome Dev Tools: Used to execute inspection of application in browser and to perform final UAT, including responsive testing.
+9. GitHub: Used to deploy a backup of project.
+10. Heroku: Used to deploy and host final project.
 
 ### Build Deployment
 1. Workpsace: Blank `Cloud 9` workspace created.
@@ -35,8 +34,8 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 5. HTML files: Developed with own code/commentary on top of bootstrap template code, e.g. overwriting photo and renaming nav bar to align with this project design. 
 6. Run.py file: Flask and python back end code developed to execute commands and render application in web browser.
 7. Commenatry: Developed throughout files for code guidance.
-8. README.md: Developed perpetually as project progressed.
-9. GitHub: Pushed to `GitHub` repo via `Linux` terminal in incremental stages to backup.
+8. README.md: Developed as project progressed.
+9. Cloud 9 Linux Terminal: Used to backup project via incremental `git status, git add <file/s> (staging area), git commit -m "<commentary>"` commands.
 
 ### Testing
 1. Manual testing, ongoing via `Cloud 9`, `Run`. After all changes, big or small, checked applciation and all functionality running correctly in browser. 
