@@ -36,6 +36,7 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 6. Run.py file: Flask and python back end code developed to execute commands and render application in web browser.
 7. Commenatry: Developed throughout files for code guidance.
 8. README.md: Developed perpetually as project progressed.
+9. GitHub: Pushed to `GitHub` repo via `Linux` terminal in incremental stages.
 
 ### Testing
 1. Manual testing, ongoing via `Cloud 9`, `Run`. After all changes, big or small, checked applciation and all fcntionality running correctly in browswer. 
@@ -56,28 +57,17 @@ A game that asks player/s to input answer/s to IQ text based riddles.
     4. Responsive Testing: Used Chrome Dev tools to inspect application on various device sizes.
         1. Bug/Expected Output - Startgame.html not responsive and skewed on all but a large screen. Issue - Issue - [OPEN BUG, NOTED WITHIN TO DO NOTES TO FIX]
 
-
 ### Final Deployment
-README: Finalised & spellchecked.
-* Heroku: Deploy final version of code. Provide instructions on how project was deployed to Heroku.
-Blank `Cloud 9` workspace created. Folders set up and files uploaded/created in line with wireframe.
-`index.html`, `graph.js` and `style.css` updated in parallel. HTML, CSS, and JavaScript code written for each section. See code commentary for detailed guidance.
-UAT: Final web design inspected via `Cloud 9`, `Run`. Responsive web design tested via `Chrome Dev Tools`, `Toggle Device Toolbar`. ``` D3 data visualisation is non-responsive and built for large screens``` therefore, `Bootstrap` containers ONLY are responsive.
-Staged Project Backup: Pushed to `GitHub` repo via `Linux` terminal in incremental stages.
+1. Backup Project - Github: 
+2. Host Project - Heroku: Add README instructions on how to deploy to Heroku. Add Heroku link for access to application.
+3. README: Finalised & spellchecked.
+4. Final Project - Github: Pushed to `GitHub` repo via `Linux` terminal.
+5. Final Project - Heroku: Pushed to `Heroku` repo via `Linux` terminal.
 
-UAT: Final application inspected via `Cloud 9`, `Run`. Responsive web design tested via `Chrome Dev Tools`, `Toggle Device Toolbar`. ``` D3 data visualisation is non-responsive and built for large screens``` therefore, `Bootstrap` containers ONLY are responsive.
-Staged Project Backup: Pushed to `GitHub` repo via `Linux` terminal in incremental stages.
-Final Project Backup: Pushed to `GitHub` repo via `Linux` terminal.
-
-### Developer 'To Do' Notes
-
-* Current iteration = i1.
-* Subsequent iterations:
-
-    1. Review E2E (incl. clarity of code by refactoring and code commentary). Apply improvements.
-    2. Revise startgame.html to be responsive on all screen sizes.
-    3. Revise startgame.html player/s list to not include duplicated name with every correct answer.
-    2. Increase number of riddles, add automated TDD (Test Driven Development) if drives beneficial.
-    3. Add numercal scoring system and leaderboard ranking all historic players by highest to lowest scores.
-    4. Remove brackets around player name on incorrect answer list, streamline to align styling with players list.
-    
+### Developer To Do Notes
+1. Review E2E (incl. clarity of code by refactoring and code commentary). Apply improvements.
+2. Revise startgame.html to be responsive on all screen sizes.
+3. Revise startgame.html player/s list to not include duplicated name with every correct answer.
+2. Increase number of riddles, add automated TDD (Test Driven Development) if drives beneficial.
+3. Add numercal scoring system and leaderboard ranking all historic players by highest to lowest scores.
+4. Remove brackets around player name on incorrect answer list, streamline to align styling with players list.
