@@ -49,12 +49,12 @@ A game that asks player/s to input answer/s to IQ text based riddles.
         6. Bug/Expected Output - terminal displaying error 'socket.error: [Errno 98] Address already in use [closed]'. Issue - didn't select ctrl+c and stop run.py prior to closing workspace, following morning encountered this error. Fix - researched solutions online, used stackoverflow. Ran 'lsof -i :8080' to locate port ID. Then ran sudo kill -9 <process_id> to kill process.
     2. Game: Input a test player name and selected Start Game to verify player is redirected to start the game. Answered questions incorrectly to verify incorrect answers are being stored within the appropriate list. Answered all riddles correctly to verify that the form is cleared, that the player is redirected to the next riddle and when all riddles are answered correctly the player is redirected to the end of game message.
         1. Bug/Expected Output - after inputting answer, browser error 'ValueError'. Issue - json data not reading, throwing up this error. Fix - Scanned json file for irregularities/try to identify issue. Removed comma at end of last closing curly bracket which fixed this bug.
-        2. Bug/Expected Output - during inputting all correct answers, player name is being duplicated within player name list. Issue - [DUE TO TIME CONSTRAINTS, LOGGED UNDER TO DO NOTES TO FIX].
+        2. Bug/Expected Output - during inputting all correct answers, player name is being duplicated within player name list. Issue - [LOGGED UNDER TO DO NOTES TO FIX].
         3. Bug/Expected Output - form and button hugging each other too closely. Issue - Bootstrap grid system not implemented. Fix - Added divs and html style code to create spacing.
         4. Bug/Expected Output - after updating commentary, error in browser pointing to {{ curley brackets. Issue - updated commentary to state that the code within {{ }} is flask code. The browser is trying to read this as code. Fix - updated {{ }} to the words, curley brackets.
     3. Contact: Input required data on relevant lines in form and selected send to verify that each line of the form works as expected.
     4. Responsive Testing: Used Chrome Dev tools to inspect application on various device sizes.
-        1. Bug/Expected Output - Startgame.html not responsive and skewed on all but a large screen. Issue - Issue - [DUE TO TIME CONSTRAINTS, LOGGED UNDER TO DO NOTES TO FIX].
+        1. Bug/Expected Output - Startgame.html not responsive and skewed on all but a large screen. Issue - Issue - [LOGGED UNDER TO DO NOTES TO FIX].
 
 ### Final Deployment
 1. README.md: Finalised and spell checked.
