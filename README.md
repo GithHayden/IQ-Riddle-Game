@@ -5,8 +5,8 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 
 ### Game Instructions
 1. Player/s enter a unique player name using a form and select start game.
-2. Player/s are then presented with a riddle to answer.
-3. Player/s enter an answer using a form and select submit.
+2. Player/s are then presented with a riddle.
+3. Player/s enter an answer using the form and select submit.
 4. If a player answers correctly, they are redirected to the next riddle.
 5. If a player answers incorrectly, their incorrect answer is stored and printed in an incorrect answers lists. The text area/form is then cleared so the player can guess again.
 6. If a player answers all riddles correctly, they are redirected to an end of game message.
@@ -67,7 +67,7 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 ### Developer To Do Notes
 1. Review E2E (incl. clarity of code by refactoring and code commentary). Apply improvements.
 2. Revise startgame.html to be responsive on all screen sizes.
-3. Revise startgame.html player/s list to not include duplicated name with every correct answer.
-2. Increase number of riddles, add automated TDD (Test Driven Development) if drives beneficial.
-3. Add numercal scoring system and leaderboard ranking all historic players by highest to lowest scores.
+3. Revise startgame.html player/s list to not include duplicated name with every correct answer input.
 4. Remove brackets around player name on incorrect answer list, streamline to align styling with players list.
+5. Increase number of riddles, add automated TDD (Test Driven Development) if beneficial.
+6. Add numercal scoring system and leaderboard ranking all historic players by highest to lowest scores.
