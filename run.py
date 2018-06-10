@@ -9,13 +9,14 @@ app.secret_key = 'a_secret'
 data = []
 
 def write_to_file(filename, data):
+    """Handle the process of writing data to a file"""
     with open(filename, "a") as file:
         file.writelines(data)
 
 def add_users(username):
-    write_to_file("data/players.txt","({0})-{1}\n".format
+    write_to_file("data/players.txt","({0}) {1} - {2)\n".format
         (username.title()))
-    
+
 def get_all_users():
     users = []
     with open("data/players.txt", "r") as user_messages:
@@ -33,7 +34,7 @@ def get_all_messages():
         messages = [row for row in incorrect_answers if len(row.strip()) > 0]
     return messages
     
-@app.route('/users/online', methods=["GET"])
+@app.route('/users/online', methods=["GET", "POST"])
 def game_players():
     '''Routing view for players after name is input'''
     game_players_file = open("data/game_players.txt")
@@ -100,11 +101,14 @@ def user(username):
 @app.route('/players', methods=["GET", "POST"])
 def players(username):
     """Display history of players"""
+    
     if request.method == "POST":
         add_users(username, request.form["user"] + "\n")
+        
     users = get_all_users()
-    return render_template("game.html",
+    return render_template("startgame.html",
                             username=username)
+
 
 @app.route('/<username>/<message>')
 def send_message(username, message):
@@ -112,7 +116,7 @@ def send_message(username, message):
     add_messages(username, message)
     return redirect(username)
 
-@app.route('/<username>/log_off', methods=["POST"])
+@app.route('/<username>/log_off', methods=["GET","POST"])
 def log_user_off(username):
     game_players_file = open("data/game_players.txt")
     game_players = [row for row in game_players_file if len(row.strip()) > 0 and row.strip() != username]

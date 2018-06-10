@@ -36,10 +36,10 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 6. Run.py file: Flask and python back end code developed to execute commands and render application in web browser.
 7. Commenatry: Developed throughout files for code guidance.
 8. README.md: Developed perpetually as project progressed.
-9. GitHub: Pushed to `GitHub` repo via `Linux` terminal in incremental stages.
+9. GitHub: Pushed to `GitHub` repo via `Linux` terminal in incremental stages to backup.
 
 ### Testing
-1. Manual testing, ongoing via `Cloud 9`, `Run`. After all changes, big or small, checked applciation and all fcntionality running correctly in browswer. 
+1. Manual testing, ongoing via `Cloud 9`, `Run`. After all changes, big or small, checked applciation and all functionality running correctly in browser. 
 
     1. Index.html: Selected all nav bar menus to verify that all menus operate as intended.
         1. Bug/Expected Output - code not rendering in browser. Issue - At end of html files spelled {% end block %}. Fix - Scanned code and researched online. Updated with no space i.e. {% endblock %}.
@@ -58,11 +58,21 @@ A game that asks player/s to input answer/s to IQ text based riddles.
         1. Bug/Expected Output - Startgame.html not responsive and skewed on all but a large screen. Issue - Issue - [OPEN BUG, NOTED WITHIN TO DO NOTES TO FIX]
 
 ### Final Deployment
-1. Backup Project - Github: 
-2. Host Project - Heroku: Add README instructions on how to deploy to Heroku. Add Heroku link for access to application.
-3. README: Finalised & spellchecked.
-4. Final Project - Github: Pushed to `GitHub` repo via `Linux` terminal.
-5. Final Project - Heroku: Pushed to `Heroku` repo via `Linux` terminal.
+1. README.md: Finalised and spell checked.
+2. Backup deployed via Github: [GitHub Backup](https://github.com/GithHayden/IQ-Riddle-Game).
+3. Website Deployed via Heroku: [IQ Riddle Game]()
+
+```
+DEPLOY TO HEROKU INSTRUCTIONS
+1.
+2.
+3.
+4.
+5.
+6.
+
+
+```   
 
 ### Developer To Do Notes
 1. Review E2E (incl. clarity of code by refactoring and code commentary). Apply improvements.
