@@ -23,7 +23,7 @@ A game that asks player/s to input answer/s to IQ text based riddles.
 6. JSON file: Used as a database to point to. Contains the riddle questions and answers.
 7. Text files: Used to write and read data via python back end code e.g. write player name to `players.txt` when player inputs name on form.
 8. Chrome Dev Tools: Used to execute inspection of application in browser and to perform final UAT, including responsive testing.
-9. GitHub: Used to deploy a backup of project.
+9. Git and GitHub: Used for veresion control and to deploy a backup of project.
 10. Heroku: Used to deploy and host final project.
 
 ### Build Deployment
