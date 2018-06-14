@@ -17,7 +17,7 @@
 <!-- Player name heading and list of names, within box with scroll bar. -->
 <div class="row" style="padding-top: 20px; padding-left: 50px">
     <div class="col-4" style="padding-left:0px;">
-        <h4>Player/s</h4>
+        <h4>Players</h4>
         <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
             {% for user in game_players %}
             <h6>
@@ -38,7 +38,7 @@
     </div>
     <!-- Incorrect answers player name/s and answer/s, within box with scroll bar. -->
     <div class="col-4">
-        <h4>Incorrect Answer/s</h4>
+        <h4>Incorrect Answers</h4>
         <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
             {% for message in incorrect_answers %}
             <h6>

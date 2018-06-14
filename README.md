@@ -1,7 +1,7 @@
 ![Alt text](https://ak4.picdn.net/shutterstock/videos/16982824/thumb/1.jpg?i10c=img.resize(height:160))
 
-### IQ Riddle Game
-A game that asks player/s to input answer/s to IQ text-based riddles.
+### Riddle Game
+A game that asks players to input answers to text based riddles.
 
 ### Game Instructions
 1. Player enters a unique player name, using a form and selects start game.
@@ -26,7 +26,7 @@ A game that asks player/s to input answer/s to IQ text-based riddles.
 9. **Git and GitHub**: Used for version control and to deploy a backup of the project.
 10. **Heroku**: Used to deploy and host final project.
 
-### Build Deployment
+### Development Process
 1. **Workspace**: Blank `Cloud 9` workspace created.
 2. **README.md**: Created with outline of the project and developed as project progressed.
 3. **Folders and files**: Created in line with wireframe and developed as project progressed.
@@ -48,20 +48,14 @@ A game that asks player/s to input answer/s to IQ text-based riddles.
     6. **Bug/Expected Output** - terminal displaying error 'socket.error: [Errno 98] Address already in use [closed]'. **Issue** - didn't select ctrl+c to stop run.py running prior to closing workspace, the following morning encountered this error. **Fix** - researched solutions online, used stack overflow. In terminal, ran 'lsof -i :8080' to locate port ID. Then ran sudo kill -9 <process_id> to kill process.
 2. **Game**: Input a test player name and selected start game. Verifying player is redirected to a riddle and player name is being stored within the appropriate list. Answered riddles incorrectly to verify incorrect answers are being stored within the appropriate list. Answered all riddles correctly to verify that the form is cleared, that the player is redirected to the next riddle and when all riddles are answered correctly the player is redirected to the end of game message.
     1. **Bug/Expected Output** - after inputting correct answer, browser error 'ValueError'. **Issue** - json data not reading, throwing up this error. **Fix** - scanned json file for irregularities/to try and identify the issue. Removed comma at the end of last closing curly bracket.
-    2. **Bug/Expected Output** - during inputting all correct answers, player name is being duplicated within player name list. **Issue** - THIS BUG IS LOGGED UNDER DEVELOPER TO DO NOTES TO FIX.
+    2. **Bug/Expected Output** - during inputting all correct answers, player name is being duplicated within player name list. **Issue** - OPEN TO DEBUG.
     3. **Bug/Expected Output** - form and button hugging each other too closely. **Issue** - Bootstrap grid system not implemented. **Fix** - Added divs and html style code to create spacing.
     4. **Bug/Expected Output** - after updating commentary, error in browser pointing to {{curly brackets. **Issue** - updated commentary to state that the code within {{ }} is flask code. The browser tried to read this as code. **Fix** - updated {{ }} to the words, curly brackets.
 3. **Contact**: Input required data on relevant lines in form and selected send to verify that each line of the form operates as expected.
 4. **Responsive Testing**: Used Chrome Dev tools to inspect application on various device sizes.
-    1. **Bug/Expected Output** - Startgame.html not responsive and skewed on all but a large screen. **Issue** - THIS BUG IS LOGGED UNDER DEVELOPER TO DO NOTES TO FIX.
+    1. **Bug/Expected Output** - Startgame.html not responsive and skewed on all but a large screen. **Issue** - OPEN TO DEBUG.
 
-### Final Deployment
-1. **Backup deployed via GitHub**: [GitHub Backup](https://github.com/GithHayden/IQ-Riddle-Game).
-2. **Website deployed via Heroku**: [IQ Riddle Game](https://iq-riddle-game.herokuapp.com/).
-3. **README.md**: Finalised and spell checked. Pushed to GitHub/Heroku to capture updates.
-
-```
-HOW TO DEPLOY APPLICATION TO HEROKU
+### Deploy via Heroku
 1. Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
 2. Create new Heroku app, using 'heroku apps:create appname' command.
 3. Push project to Heroku, using 'push -u heroku master' command.
@@ -69,14 +63,4 @@ HOW TO DEPLOY APPLICATION TO HEROKU
 5. Login to Heroku and select newly created app.
 6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
 7. From 'More' menu on the top right, select 'Restart all dynos'.
-8. View app: In settings, select Domain URL, NOT Git URL to view your hosted app.
-
-```   
-
-### Developer To Do Notes
-1. **Bug** - Revise startgame.html to be responsive on all screen sizes.
-2. **Bug** - Revise startgame.html player/s list to not include duplicated name with every correct answer input.
-3. **Development** - Review end to end (incl. clarity of code by refactoring and code commentary). Apply improvements.
-4. **Development** - Remove brackets around player name on incorrect answer list, streamline to align styling with players list.
-5. **Development** - Increase number of riddles. If beneficial, add automated TDD (Test Driven Development).
-6. **Development** - Add numerical scoring system and leader board ranking all historic players by highest to lowest scores. Spellcheck
+8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
