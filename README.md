@@ -64,3 +64,4 @@ A game that asks players to input answers to text based riddles.
 6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
 7. From 'More' menu on the top right, select 'Restart all dynos'.
 8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
+9. Deployed via Heroku: [Riddle Game Website](https://iq-riddle-game.herokuapp.com/).
