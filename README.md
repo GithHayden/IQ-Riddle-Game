@@ -4,26 +4,31 @@
 
 
 
-# The Beach Boys
+# US Equity Markets 2017
 
-This website is a static (front-end only) application for The Beach Boys, 1960's rock band. The primary target audiences are fans, potential fans and customers. Users can sign up for news, read an overview about the band, watch and download videos, listen to and download audio tracks, contact the band, request a booking and follow the band on social media.
+This website is a **SPA** (Single Page Application) **Data Visualisation Dashboard Interface** which harnesses, the power of [D3.js](https://d3js.org/), a Javascript library for charting, created by Mike Bostock. The primary target audience is any user who wants to gain a comparable analysis of all NASDAQ and NYSE equities priced under USD$50, at 2017 year end.
+
+This SPA site provides users with a drop-down selector, pie charts, bar charts and a scatter plot chart. Providing data visualisation across a number of dimensions i.e. by sector, by industry, number of equities, market capitalisation, domiciled by country, volume and price.
 
 ## UX
 
 The following section describes the UX process for this project.
 
 #### UX Process
-1. **The Beach Boys** - Reviewed The Beach Boys videos, music and website to understand this genre, fans, potential fans and customers.
-2. **Layout** - Reviewed Code Institute learnings to date, Bootstrap documentation and templates to extract design ideas.
+1. **US Equity Markets** - Using my own knowledge, sketched out potential sets of data to include within a dashboard.
+2. **Layout** - Reviewed the Code Institute learnings to date, Bootswatch themes and D3.js documentation to extract design ideas.
 3. **User Stories** - Walked through user stories.
-    1. **Photo of the band** - As a fan, potential fan or customer, I want to view an up-to-date photo of the band to get a sense of their vibe.
-    2. **Subscribe to News** - As a fan, potential fan or customer, I want to subscribe to The Beach Boys news, to receive updates on the bands members, their concerts and new music.
-    3. **About** - As a fan, potential fan or customer, I want to read a summary about The Beach Boys, to understand their background to date.
-    4. **Videos** - As a fan, potential fan or customer, I want to watch The Beach Boys videos, for entertainment, to download videos and to see their performances should I choose to book them for an event or a live concert.
-    5. **Audio** - As a fan, potential fan or customer, I want to listen to The Beach Boys audio tracks, for entertainment, to download audio tracks and to listen to their music should I choose to book them for an event or a live concert.
-    6. **Contact** - As a fan, potential fan or customer I want to be able to contact the band, to submit feedback or request to book the band for an event.
-    7. **Social Media Icons** - As a fan, potential fan or customer I want to be able to follow the band on social media, to be a part of their journey and interact with them online.
-4. **Wireframe** - Sketched the wireframe on paper, to include a section for each user story, delivering a clear design to connect the bands needs to the user’s needs.
+    1. **About** - As a user, I want to clearly understand the purpose of this dashboard and the data included.
+    2. **User Guidance** - As a user, I want to to clearly understand how to use this dashboard.
+    3. **Select Industry** - As a user, I want to be able to drill into each sector by industry type.
+    4. **Number of Equities by Sector** - As a user, I want to be able to view the number of equities by sector and drill into each sector by industry type.
+    5. **Market Capitalisation by Sector** - As a user, I want to be able to view the market capitalisation by sector and drill into each sector by industry type.
+    6. **Market Capitalisation by Domiciled Country** - As a user, I want to be able to view the market capitalisation by domiciled country and drill into each sector by industry type.
+    7. **Average Daily Volume by Sector** - As a user, I want to be able to view the average daily volume by sector and drill into each sector by industry type.
+    8. **Average Daily Volume by Domiciled Country** - As a user, I want to be able to view the average daily volume by domicilied country, by sector and drill into each sector by industry type.
+    9. **Average Daily Volume per Equity by Sector** - As a user, I want to be able to view the average daily volume per equity, by sector and drill into each sector by industry type.
+    10. **Average Daily Volume per Equity Vs. Price per Equity** - As a user, I want to be able to view the average daily volume per equity Vs. price per equity, by sector and drill into each sector by industry type.
+4. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story, meeting the users needs by presenting the data on a dashboard charting web application.
 
 ## Features
  
@@ -31,19 +36,22 @@ The following section describes the UX process for this project.
 
 The following section describes all the front-end features in this project.
 
-1. **The Beach Boys** - Landing page navbar menu item. When selected moves users to the landing page, which is a photo of the band with a call to action text. This section also has a Sign-Up button, when selected, a modal appears, where users can complete their details and submit, to sign up to news.
-2. **About** - About navbar menu item. When selected moves users to view the about section, which contains a summary about The Beach Boys, to understand the bands background.
-3. **Videos** - Video navbar item. When selected moves users to view the video section which showcases the bands videos, for entertainment, to download videos and to see their performances should a user choose to book them for an event or live gig.
-4. **Audio** - Audio navbar item. When selected moves users to listen to audio tracks of the band which showcases audio tracks, for entertainment, to download and to listen to their music should a user choose to book them for an event or live gig.
-5. **Contact** - Contact navbar item. When selected moves the users to the contact section, to be able to contact the band, to submit feedback or to book the band for an event.
-6. **Social Media Icons** - Icons for Facebook, Twitter and Youtube, when selected moves users to each social media page. Allows users to be a part of the bands journey and interact with them online.
+1. **About** - Provides users with a description of the dashboards purpose and what data is included.
+2. **User Guidance** - Provides users with guidance on how to use the dashboard.
+3. **Select Industry** - A drop-down selector, allowing users to select all or a specific industry. When a selection is made, each chart is automatically upated with the relevant industry data. Allows users to reset all charts by selecting 'Select all'.
+4. **Number of Equities by Sector** - A bar chart displaying 'Number of Equities by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. The bar chart provides an X and Y axis, visualisation of relevant data, and is useful for understanding comparisons.
+5. **Market Capitalisation by Sector** - A pie chart displaying 'Market Capitalisation by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
+6. **Market Capitalisation by Domiciled Country** - A pie chart displaying 'Market Capitalisation by Domiciled Country', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
+7. **Average Daily Volume by Sector** - A pie chart displaying 'Average Daily Volume by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
+8. **Average Daily Volume by Domiciled Country** - A pie chart displaying 'Average Daily Volume by Domiciled Country', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
+9. **Average Daily Volume per Equity by Sector** - A bar chart displaying 'Average Daily Volume per Equity by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. The bar chart provides an X and Y axis, visualisation of relevant data, and is useful for understanding comparisons.
+10. **Average Daily Volume per Equity Vs. Price per Equity** - A scatter plot chart displaying 'Average Daily Volume per Equity Vs. Price per Equity', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides an X and Y axis, visualisation of relevant data, and is useful for understanding correlation/distribution.
 
 ### Features to Implement
-1. **Merchandise** - Add a feature to sell the bands merchandise.
-2. **Book live concerts** - Add a feature to allow fans to purchase tickets via this website.
-3. **Live concert schedule** - Add a feature to show a summary of the bands concert schedule.
-4. **Videos** - Upgrade the video feature to a horizontal, automatic, video slider to enhance UX/UI.
-5. **Audio Tracks** - Upgrade the video feature to a horizontal, automatic, video slider with track photo image, to enhance UX/UI.
+1. **Interactive Tutorial** - Add a feature to include an interactive tutorial.
+2. **Comma Seperator** - Update hoover metrics to include a comma seperator.
+3. **X and Y axis** - Update to implement improved ways to style both axis's.
+4. **Icons** - Add icons where more streamlined design can be achieved.
 
 ## Technologies Used
 
@@ -51,20 +59,28 @@ The following section describes all technologies and tools used to construct thi
 
 - [Cloud 9 IDE](https://aws.amazon.com/cloud9/)
     - The project used **Cloud 9**, online integrated development environment, to construct the code end to end.
-- [Bootstrap Template](https://github.com/BlackrockDigital/startbootstrap-scrolling-nav)
-    - This project uses **Bootstrap Nav scrolling bar template**. A blank template with a main navigation and grid layout. This blank template was used as a starting block and tailored/built upon for this specific website. The `index.html` and `main.css` files are predominantly all, the developers code. All other code was included with the Bootstrap template.
-- [Font Awesome](https://fontawesome.com/)
-    - This project uses **Font Awesome**, a library of icons, to add the social media icons within the footer.
-- [HTML](https://en.wikipedia.org/wiki/HTML)
-    - This project uses **HTML**, the standard mark-up language used to build website layout, which was written within the `index.html` file.
+- [Comma-separated values file](https://en.wikipedia.org/wiki/Comma-separated_values)
+    - This project uses a .csv file, which stores tabular data (numbers and text) in plain text. The `Equities.csv` file contains the dataset that populates the front-end charts for this project.
+- [Bootswatch](https://bootswatch.com)
+    - This project uses **Bootswatch**, a library of Bootstrap themes. The `flatly theme`, `bootstrap.min.css` file was used for this project.
+- [DC](https://dc-js.github.io/dc.js/)
+    - This project uses **DC.js**, a javascript charting library with native crossfilter support, allowing highly efficient exploration on large multi-dimensional datasets. It leverages D3 to render charts in CSS-friendly SVG format.
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-    - This project uses **CSS**, a style sheet language, used to add styling to a website. The `main.css` file was added to this project, to add additional styling on top of the Bootstrap template.
+    - This project uses **CSS**, a style sheet language, used to add styling to a website. The `style.css` file was added to this project, to build additional styling on top of the Bootswatch theme.
+- [Crossfilter](http://square.github.io/crossfilter/)
+    - This project uses **Crossfilter**, a JavaScript library for exploring large multivariate datasets in the browser. 
+- [D3](https://d3js.org/)
+    - This project uses **D3.js**, a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS, producing interactive data visualizations.
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+    - This project uses **Javascript**, an object-oriented programming language used to create interactive effects within web browsers.
+- [D3-Queue](https://github.com/d3/d3-queue)
+    - This project uses **D3-Queue**, which assists with loading files and defers calling function, until the data is ready.
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+    - This project uses **HTML**, the standard mark-up language used to build website layout, which was written in this project within the `index.html` file.
 - [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools/)
     - This project uses **Chrome Dev Tools**, a set of web developer tools, to continuously test and inspect that the web pages are rendering as expected within the browser.
 - [GitHub](https://github.com/)
     - This project uses **GitHub**, a web hosting service, for version control and final project deployment.
-- [All Other Technologies](https://github.com/BlackrockDigital/startbootstrap-scrolling-nav)
-    - All other technologies within this project were included with the Bootstrap template.
 
 ## Testing
 
