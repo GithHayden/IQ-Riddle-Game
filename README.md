@@ -4,7 +4,7 @@
 
 
 
-# US Equity Markets 2017
+# Riddle Game
 
 This website is a **SPA** (Single Page Application) **Data Visualisation Dashboard Interface** which harnesses, the power of [D3.js](https://d3js.org/), a Javascript library for charting, created by Mike Bostock. The primary target audience is any user who wants to gain a comparable analysis of all NASDAQ and NYSE equities priced under USD$50, at 2017 year end.
 
