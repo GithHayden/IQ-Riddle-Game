@@ -18,7 +18,7 @@ The following section describes the UX process for this project.
     6. **Answer Riddles** - As a user, I want to be able to enter an answer into a textarea, submit an answer and if I provide the correct answer, be redirected to the next riddle.
     7. **Enter Incorrect Answer** - As a user, I want to be able to enter an answer into a textarea, submit an answer and if I provide an incorrect answer, the textarea is cleared, redirecting me to a blank textarea to guess again.
     8. **List Incorrect Answer** - As a user, I want to be able to view incorrect answers, displayed in a list.
-    8. **Answered all Riddles Correctly ** - As a user, when I have answered all riddles correctly, I want to be redirected to an end of game message.
+    9. **Answered all Riddles Correctly ** - As a user, when I have answered all riddles correctly, I want to be redirected to an end of game message.
 3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story, meeting the users needs by presenting the data on a dashboard charting web application.
 
 ## Features
@@ -27,20 +27,20 @@ The following section describes the UX process for this project.
 
 The following section describes all the front-end features in this project.
 
-1. **About** - Provides users with a description of the dashboards purpose and what data is included.
-2. **User Guidance** - Provides users with guidance on how to use the dashboard.
-3. **Select Industry** - A drop-down selector, allowing users to select all or a specific industry. When a selection is made, each chart is automatically upated with the relevant industry data. Allows users to reset all charts by selecting 'Select all'.
-4. **Number of Equities by Sector** - A bar chart displaying 'Number of Equities by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. The bar chart provides an X and Y axis, visualisation of relevant data, and is useful for understanding comparisons.
-5. **Market Capitalisation by Sector** - A pie chart displaying 'Market Capitalisation by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
-6. **Market Capitalisation by Domiciled Country** - A pie chart displaying 'Market Capitalisation by Domiciled Country', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
-7. **Average Daily Volume by Sector** - A pie chart displaying 'Average Daily Volume by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
-8. **Average Daily Volume by Domiciled Country** - A pie chart displaying 'Average Daily Volume by Domiciled Country', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides subset visualisation of all parts and is useful for understanding the whole picture.
-9. **Average Daily Volume per Equity by Sector** - A bar chart displaying 'Average Daily Volume per Equity by Sector', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. The bar chart provides an X and Y axis, visualisation of relevant data, and is useful for understanding comparisons.
-10. **Average Daily Volume per Equity Vs. Price per Equity** - A scatter plot chart displaying 'Average Daily Volume per Equity Vs. Price per Equity', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides an X and Y axis, visualisation of relevant data, and is useful for understanding correlation/distribution.
+1. **Header Call-to-action** - Provides users with a website title and description of what to do next.
+2. **Navbar - Contact** - Provides users with a navbar menu, bringing users to a form, to contact developers.
+3. **Navbar - Riddle Game** - Provides users with a navbar menu to go to the homepage.
+4. **Navbar - Game** - Provides users with a navbar menu to restart the game at any stage.
+5. **Enter Player Name** - Provides users with a blank text area to input a player name.
+6. **Start Game** - Provides users with a new page, which greets them by their player name, displays a riddle one by one, and displays their player name in a list of player names.
+6. **Answer Riddles** - Provides users with a blank text area, to enter their answer and select submit to be redirected to the next riddle if the answer is correct.
+7. **Enter Incorrect Answer** - Provides users with a blank text area, to enter their answer and select submit to be reidrected to answer this riddle again if the answer is incorrect.
+8. **List Incorrect Answer** - Provides users with a list of incorrect answers.
+9. **Answered all Riddles Correctly ** - Provides users with a end of game message when they have answered all riddles correctly.
 
 ### Features to Implement
 1. **Leaderboard** - Add a feature to include a scoring system that ranks all players.
-2. **Incorrect Answers - Show Riddle Number** - Consider adding a feature to indicate which incorrect answer is related to which riddle, but esure not to make the game too simple for players.
+2. **Incorrect Answers - Show Riddle or Riddle Number** - Consider adding a feature to indicate which incorrect answer is related to which riddle, but ensure not to make the game too simple for players e.g. by storing prior players incorrect answers.
 
 ## Technologies Used
 
