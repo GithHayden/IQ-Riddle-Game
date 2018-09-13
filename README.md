@@ -1,9 +1,7 @@
 # Riddle Game
-
 This website is a **Flask application**, a python microframework. The target audience is any user who wants to play a guessing-riddle game for entertainment. The game asks players to input a player name and answer a number of text based riddles.
 
 ## UX
-
 The following section describes the UX process for this project.
 
 #### UX Process
@@ -24,7 +22,6 @@ The following section describes the UX process for this project.
 ## Features
 
 ### Existing Features
-
 The following section describes all the front-end features in this project.
 
 1. **Header Call-to-action** - Provides users with a website title and description of what to do next.
@@ -43,7 +40,6 @@ The following section describes all the front-end features in this project.
 2. **Incorrect Answers - Show Riddle or Riddle Number** - Consider adding a feature to indicate which incorrect answer is related to which riddle, but ensure not to make the game too simple for players e.g. by storing prior players incorrect answers.
 
 ## Technologies Used
-
 The following section describes all technologies and tools used to construct this project.
 
 - [Cloud 9 IDE](https://aws.amazon.com/cloud9/)
@@ -75,7 +71,6 @@ The following section describes all technologies and tools used to construct thi
     - All other technologies within this project were included with the Bootstrap template.
 
 ## Testing
-
 The following is an overview of testing to ensure all functionality works as intended in this project.
 
 **Manual testing**, ongoing via `Cloud 9`, `Run`. Once each functionality coded, checked application operating as expected in web browser by walking through each functionality. Testing included the following:
@@ -191,5 +186,4 @@ The following section describes the process to deploy this project to GitHub Pag
 - The videos and audio tracks in this site were copied from [YouTube](https://www.youtube.com/). They were then converted to MP4 and MP3 files.
 
 ### Acknowledgements
-
 - I received inspiration for this project from The Beach Boys videos, music and website, from Bootstrap template designs, from ongoing research online and from Code Institute education.
