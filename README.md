@@ -9,14 +9,14 @@ The following section describes the UX process for this project.
 2. **User Stories** - Walked through user stories.
     1. **Header Call-to-action** - As a user, I want to understand the purpose of this website and intuitively understand how to use it.
     2. **Navbar - Contact** - As a user, I want to be able to contact the developers to offer feedback and suggestions.
-    3. **Navbar - Riddle Game** - As a user, I want to be able to select the homepage, and be presented with a blank player name textarea.
+    3. **Navbar - Riddle Game** - As a user, I want to be able to select the landing page, and be presented with a blank player name textarea.
     4. **Navbar - Game** - As a user, I want to be able to restart the game, and be presented with a blank player name textarea.
     5. **Enter Player Name** - As a user, I want to be able to enter a unique player name into a textarea, and start the game.
     6. **Start Game** - As a user, once I select start game, I want to be greeted with my player name, to be presented with the first riddle and my player name to be displayed in a list.
     6. **Answer Riddles** - As a user, I want to be able to enter an answer into a textarea, submit an answer and if I provide the correct answer, be redirected to the next riddle.
     7. **Enter Incorrect Answer** - As a user, I want to be able to enter an answer into a textarea, submit an answer and if I provide an incorrect answer, the textarea is cleared, redirecting me to a blank textarea to guess again.
     8. **List Incorrect Answer** - As a user, I want to be able to view incorrect answers, displayed in a list.
-    9. **Answered all Riddles Correctly ** - As a user, when I have answered all riddles correctly, I want to be redirected to an end of game message.
+    9. **Answer all Riddles Correctly ** - As a user, when I have answered all riddles correctly, I want to be redirected to an end of game message.
 3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story, meeting the users needs by presenting the data on a dashboard charting web application.
 
 ## Features
@@ -26,14 +26,14 @@ The following section describes all the front-end features in this project.
 
 1. **Header Call-to-action** - Provides users with a website title and description of what to do next.
 2. **Navbar - Contact** - Provides users with a navbar menu, bringing users to a form, to contact developers.
-3. **Navbar - Riddle Game** - Provides users with a navbar menu to go to the homepage.
+3. **Navbar - Riddle Game** - Provides users with a navbar menu to go to the landing page.
 4. **Navbar - Game** - Provides users with a navbar menu to restart the game at any stage.
 5. **Enter Player Name** - Provides users with a blank text area to input a player name.
 6. **Start Game** - Provides users with a new page, which greets them by their player name, displays a riddle one by one, and displays their player name in a list of player names.
-6. **Answer Riddles** - Provides users with a blank text area, to enter their answer and select submit to be redirected to the next riddle if the answer is correct.
-7. **Enter Incorrect Answer** - Provides users with a blank text area, to enter their answer and select submit to be reidrected to answer this riddle again if the answer is incorrect.
-8. **List Incorrect Answer** - Provides users with a list of incorrect answers.
-9. **Answered all Riddles Correctly ** - Provides users with a end of game message when they have answered all riddles correctly.
+7. **Answer Riddles** - Provides users with a blank text area, to enter their answer and select submit to be redirected to the next riddle if the answer is correct.
+8. **Enter Incorrect Answer** - Provides users with a blank text area, to enter their answer and select submit to be reidrected to answer this riddle again if the answer is incorrect.
+9. **List Incorrect Answer** - Provides users with a list of incorrect answers.
+10. **Answer all Riddles Correctly ** - Provides users with a end of game message when they have answered all riddles correctly.
 
 ### Features to Implement
 1. **Leaderboard** - Add a feature to include a scoring system that ranks all players.
@@ -73,12 +73,36 @@ The following section describes all technologies and tools used to construct thi
 ## Testing
 The following is an overview of testing to ensure all functionality works as intended in this project.
 
-**Manual testing**, ongoing via `Cloud 9`, `Run`. Once each functionality coded, checked application operating as expected in web browser by walking through each functionality. Testing included the following:
+1. **Navbar - Contact**:
+    1. Select 'Contact' on the navbar and verify that the user is moved to the contact section and away from the landing page.
+    2. Complete all user details within the contact form and verify that all fields accept relevant inputs.
+    3. Select 'Send' to submit the user’s details and verify that the user is brought to a thank you message and the form input fields are cleared.
+        - **Bug 1** - Code not intially rendering in browser.
+            - **Issue** - Jinja at end of html files spelled {% end block %}, in error.
+            - **Fix** - Scanned all html code. Updated with relevant jinja code, with no space i.e. {% endblock %}.
+        - **Bug 2** - 'Contact Developer' heading missing.
+            - **Issue** - Jinja typo in {{ page_heading }} on `contact.html` and code not reading from `run.py` file.
+            - **Fix** - Checked relevant code and updated typo to ensure {{ page_heading }} spelled the same as code on `run.py` file.
+2. **Navbar - Riddle Game**
+    1. Select 'Riddle Game' on the navbar and verify that the user is moved to the landing page.
+    2. Verify that the landing page player name text area is blank and ready to start a new game.
+3. **Navbar - Game**
+    1. Select 'Game' on the navbar and verify that the user is moved to the landing page.
+    2. Verify that the landing page player name text area is blank and ready to start a new game.
+4. **Enter Player Name and Start Game**
+    1. Enter a player name into the blank text area.
+    2. Select 'Start Game' and verify that the user is moved to the start game page, is greeted by their player name, is presented with the first riddle, displays their name in a list of player names and displays a list of blank incorrect answers.
+6. **Answer Riddles**
+    1. Enter an answer in the blank text area.
+    2. Select 'Submit' to be redirected to the next riddle if the answer is correct.
+7. **Enter Incorrect Answer**
+    1. Enter an answer in the blank text area.
+    2. Select 'Submit' to be redirected to answer the riddle again if the answer is incorrect.
+    3. Verify that incorrect answers are displayed with a list of incorrect answers.
+7. **Answer all Riddles Correctly**
+    1. Enter the correct answer for all riddles.
+    2. Verfiy that the user is brough to an end of game message and have the option to restart the game via the navbar menu.
 
-1. **Index.html**: Selected all nav bar menus to verify that all menus operated as intended. The following bugs were encountered.
-    1. **Bug/Expected Output** - code not rendering in browser. **Issue** - At end of html files spelled {% end block %}. **Fix** - Scanned code. Updated with no space i.e. {% endblock %}.
-    2. **Bug/Expected Output** - contact page missing 'Contact Developer' heading. **Issue** - Typo in {{ page_heading }} on contact.html and code not reading from run.py. **Fix** - Checked relevant code and updated typo to ensure {{ page_heading }} spelled the same as code on run.py.
-    3. **Bug/Expected Output** - header photo skewed/not looking good. **Issue** - pixel sizing not in line with bootstrap design. **Fix** - Researched online until located appropriately sized photo to fit bootstrap template.
     4. **Bug/Expected Output** - after inputting player name and selecting start game, browser error 'Method Not Allowed'. **Issue** - run.py not updated with code to write player name to players.txt. **Fix** - Developed run.py to include relevant code to write to players.txt.
     5. **Bug/Expected Output** - form and button hugging each other too closely. **Issue** - Bootstrap grid system not implemented. **Fix** - Added divs and html style code to create spacing.
     6. **Bug/Expected Output** - terminal displaying error 'socket.error: [Errno 98] Address already in use [closed]'. **Issue** - didn't select ctrl+c to stop run.py running prior to closing workspace, the following morning encountered this error. **Fix** - researched solutions online, used stack overflow. In terminal, ran 'lsof -i :8080' to locate port ID. Then ran sudo kill -9 <process_id> to kill process.
