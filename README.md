@@ -83,6 +83,9 @@ The following is an overview of testing to ensure all functionality works as int
         - **Bug 2** - 'Contact Developer' heading missing.
             - **Issue** - Jinja typo in {{ page_heading }} on `contact.html` and code not reading from `run.py` file.
             - **Fix** - Checked relevant code and updated typo to ensure {{ page_heading }} spelled the same as code on `run.py` file.
+        - **Bug 3** - After updating commentary within html files, error in browser pointing to {{curly brackets.
+            - **Issue** - Updated commentary to state that the code within 'curley brackets', is flask code. The browser tried to read this as code.
+            - **Fix** - Updated {{ }} to the words, curly brackets.
 2. **Navbar - Riddle Game**
     1. Select 'Riddle Game' on the navbar and verify that the user is moved to the landing page.
     2. Verify that the landing page player name text area is blank and ready to start a new game.
@@ -91,89 +94,38 @@ The following is an overview of testing to ensure all functionality works as int
     2. Verify that the landing page player name text area is blank and ready to start a new game.
 4. **Enter Player Name and Start Game**
     1. Enter a player name into the blank text area.
-    2. Select 'Start Game' and verify that the user is moved to the start game page, is greeted by their player name, is presented with the first riddle, displays their name in a list of player names and displays a list of blank incorrect answers.
-6. **Answer Riddles**
+    2. Select 'Start Game' and verify that the user is moved to the start game page, is greeted by their player name with instructions on answering the riddle, is presented with the first riddle, displays their name in a list of player names and displays a list of blank incorrect answers.
+    3. Verify scrolling bar appear on player name list once the list is longer than the box.
+        - **Bug 1** - After entering player name and selecting start game, browser error 'Method Not Allowed'.
+            - **Issue** - `run.py` not updated with code to write player name to `players.txt`.
+            - **Fix** - Updated `run.py` to write to `players.txt`.
+        - **Bug 2** - Player name is appearing duplicated on the list of player names.
+            - **Issue** - OPEN BUG.
+            - **Fix** - OPEN BUG.
+5. **Answer Riddles**
     1. Enter an answer in the blank text area.
     2. Select 'Submit' to be redirected to the next riddle if the answer is correct.
-7. **Enter Incorrect Answer**
+        - **Bug 1** - After entering correct answer, brower error 'ValueError' appeared.
+            - **Issue** - JSON data is not reading.
+            - **Fix** - Scanned `riddles.json` for to identify the issue. Removed comma at the end of last closing curly bracket.
+6. **Enter Incorrect Answer**
     1. Enter an answer in the blank text area.
     2. Select 'Submit' to be redirected to answer the riddle again if the answer is incorrect.
     3. Verify that incorrect answers are displayed with a list of incorrect answers.
+    4. Verify scrolling bar appear on incorrect answer list once the list is longer than the box.
 7. **Answer all Riddles Correctly**
     1. Enter the correct answer for all riddles.
     2. Verfiy that the user is brough to an end of game message and have the option to restart the game via the navbar menu.
-
-    4. **Bug/Expected Output** - after inputting player name and selecting start game, browser error 'Method Not Allowed'. **Issue** - run.py not updated with code to write player name to players.txt. **Fix** - Developed run.py to include relevant code to write to players.txt.
-    5. **Bug/Expected Output** - form and button hugging each other too closely. **Issue** - Bootstrap grid system not implemented. **Fix** - Added divs and html style code to create spacing.
-    6. **Bug/Expected Output** - terminal displaying error 'socket.error: [Errno 98] Address already in use [closed]'. **Issue** - didn't select ctrl+c to stop run.py running prior to closing workspace, the following morning encountered this error. **Fix** - researched solutions online, used stack overflow. In terminal, ran 'lsof -i :8080' to locate port ID. Then ran sudo kill -9 <process_id> to kill process.
-2. **Game**: Input a test player name and selected start game. Verifying player is redirected to a riddle and player name is being stored within the appropriate list. Answered riddles incorrectly to verify incorrect answers are being stored within the appropriate list. Answered all riddles correctly to verify that the form is cleared, that the player is redirected to the next riddle and when all riddles are answered correctly the player is redirected to the end of game message.
-    1. **Bug/Expected Output** - after inputting correct answer, browser error 'ValueError'. **Issue** - json data not reading, throwing up this error. **Fix** - scanned json file for irregularities/to try and identify the issue. Removed comma at the end of last closing curly bracket.
-    2. **Bug/Expected Output** - during inputting all correct answers, player name is being duplicated within player name list. **Issue** - OPEN TO DEBUG.
-    3. **Bug/Expected Output** - form and button hugging each other too closely. **Issue** - Bootstrap grid system not implemented. **Fix** - Added divs and html style code to create spacing.
-    4. **Bug/Expected Output** - after updating commentary, error in browser pointing to {{curly brackets. **Issue** - updated commentary to state that the code within {{ }} is flask code. The browser tried to read this as code. **Fix** - updated {{ }} to the words, curly brackets.
-3. **Contact**: Input required data on relevant lines in form and selected send to verify that each line of the form operates as expected.
-4. **Responsive Testing**: Used Chrome Dev tools to inspect application on various device sizes.
-    1. **Bug/Expected Output** - Startgame.html not responsive and skewed on all but a large screen. **Issue** - OPEN TO DEBUG.
-
-
-
-
-1. **Landing section and Subscribe to News**:
-    1. Select the 'Contact' menu on the navbar and verify that the user is moved to the contact section and away from the landing page.
-    2. Select 'The Beach Boys' menu on the navbar and verify that the user is moved to the landing page.
-    3. Select the 'Sign Up' button and verify that a modal appears.
-    4. Complete all user details within the modal and verify that all fields accept relevant inputs.
-    5. Select 'Sign Up' to submit the user’s details and verify that the modal closes.
-    
-        - **Bug 1** - Call to action text not standing out for clean reading.
-            - **Issue** - Background photo too bright and text size too small.
-            - **Fix** - Adjusted photo coloring by reducing brightness and uploaded new photo. Increased text size use of html `<h1>` and `<strong>` tags.
-        
-        - **Bug 2** - Modal input field text alignment centred, rather than left aligned.
-            - **Issue** - Additional `<div>` tags throwing out alignment.
-            - **Fix** - Updated `<div>` tags to ensure alignment correct.
-
-2. **About Section**:
-    1. Select the 'About' menu on the navbar and verify that the user is moved to the about section.
-    2. Select the hyperlink, 'To request a booking, please go to the contact section.', and verify that the user is moved to the contact section.
-
-3. **Videos Section**:
-    1. Select the 'Videos' menu on the navbar and verify that the user is moved to the videos section.
-    2. On each video, select play, pause, time slider, volume icon, volume slider, full screen and download. Verify that all functionalities work as intended.
-
-        - **Bug 1** - Custom `main.css`, not overriding Bootstrap CSS.
-            - **Issue** - Website not rendering in browser until Chrome cache cleared.
-            - **Fix** - Spent significant time, hours over several days researching this. Decided to try to clear the cache in Chrome and this fixed the issue. Also used CSS id classes in some areas of the `main.css` to override the Bootstrap CSS.
-
-        - **Bug 2** - Bootstrap template grid not suitable for the video layout.
-            - **Issue** - Bootstrap template grid only suitable for one column of data.
-            - **Fix** - Updated `index.html` `<div>` tags around the videos to a bootstrap grid class of `col-sm-6`, to layout two videos side by side within each div row.
-
-4. **Audio Section**:
-    1. Select the 'Audio' menu on the navbar and verify that the user is moved to the audio section.
-    2. On each audio track, select play, pause, time slider, volume icon, volume slider, and download. Verify that all functionalities work as intended.
-    
-        - **Bug** - Bootstrap template grid not suitable for audio layout.
-            - **Issue** - Bootstrap template grid suitable for one column of data.
-            - **Fix** - Updated `index.html` `<div>` tags around the audio to a bootstrap grid class of `col-sm-6`, to layout two audio tracks side by side on each div row.
-        
-        - **Bug** - Each audio track includes a video thumbnail above the controls.
-            - **Issue** - Used `<video>` html tags, that should be `<audio>` html tags.
-            - **Fix** - Updated relevant `<video>` html tags, that should be `<audio>` html tags.
-
-5. **Contact Section**:
-    1. Select the 'Contact' menu on the navbar and verify that the user is moved to the contact section.
-    2. Complete all user details within the form and verify that all input fields accept the text as intended.
-
-6. **Social Media Icons**:
-    1. Scroll to the footer section.
-    2. Select the Facebook, Twitter and YouTube icons, and verify that all icon hoover styling is as intended. Verify that all icons open each social media page, in a new browser window.
-
-7. **Responsive Testing**:
+8. **Responsive Testing**:
     1. In Chrome, right click on the site and select 'inspect', to open the Chrome Dev tools.
     2. Select the toggle device icon at the top of the window, to open the responsive testing window.
     3. Test how the website is rendering on each device size from Galaxy S5 to iPad Pro.
-
+        - **Bug 1** - Terminal displaying error 'socket.error: [Errno 98] Address already in use [closed]'.
+            - **Issue** - Did not select ctrl+c to stop run.py running prior to closing workspace, the following morning encountered this error. 
+            - **Fix** - Researched solutions online, used stack overflow. In terminal, ran `lsof -i :8080` to locate port ID. Then ran `sudo kill -9 <process_id>` to kill process.
+        - **Bug 2** - Application not responsive on smaller devices.
+            - **Issue** - OPEN BUG.
+            - **Fix** - OPEN BUG.
 
 ## Deployment
 The following section describes the process to deploy this project to GitHub Pages.
