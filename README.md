@@ -1,37 +1,28 @@
-![Alt text](https://ak4.picdn.net/shutterstock/videos/16982824/thumb/1.jpg?i10c=img.resize(height:160))
-
-
-
-
-
 # Riddle Game
 
-This website is a **SPA** (Single Page Application) **Data Visualisation Dashboard Interface** which harnesses, the power of [D3.js](https://d3js.org/), a Javascript library for charting, created by Mike Bostock. The primary target audience is any user who wants to gain a comparable analysis of all NASDAQ and NYSE equities priced under USD$50, at 2017 year end.
-
-This SPA site provides users with a drop-down selector, pie charts, bar charts and a scatter plot chart. Providing data visualisation across a number of dimensions i.e. by sector, by industry, number of equities, market capitalisation, domiciled by country, volume and price.
+This website is a **Flask application**, a python microframework. The target audience is any user who wants to play a guessing-riddle game for entertainment. The game asks players to input a player name and answer a number of text based riddles.
 
 ## UX
 
 The following section describes the UX process for this project.
 
 #### UX Process
-1. **US Equity Markets** - Using my own knowledge, sketched out potential sets of data to include within a dashboard.
-2. **Layout** - Reviewed the Code Institute learnings to date, Bootswatch themes and D3.js documentation to extract design ideas.
-3. **User Stories** - Walked through user stories.
-    1. **About** - As a user, I want to clearly understand the purpose of this dashboard and the data included.
-    2. **User Guidance** - As a user, I want to to clearly understand how to use this dashboard.
-    3. **Select Industry** - As a user, I want to be able to drill into each sector by industry type.
-    4. **Number of Equities by Sector** - As a user, I want to be able to view the number of equities by sector and drill into each sector by industry type.
-    5. **Market Capitalisation by Sector** - As a user, I want to be able to view the market capitalisation by sector and drill into each sector by industry type.
-    6. **Market Capitalisation by Domiciled Country** - As a user, I want to be able to view the market capitalisation by domiciled country and drill into each sector by industry type.
-    7. **Average Daily Volume by Sector** - As a user, I want to be able to view the average daily volume by sector and drill into each sector by industry type.
-    8. **Average Daily Volume by Domiciled Country** - As a user, I want to be able to view the average daily volume by domicilied country, by sector and drill into each sector by industry type.
-    9. **Average Daily Volume per Equity by Sector** - As a user, I want to be able to view the average daily volume per equity, by sector and drill into each sector by industry type.
-    10. **Average Daily Volume per Equity Vs. Price per Equity** - As a user, I want to be able to view the average daily volume per equity Vs. price per equity, by sector and drill into each sector by industry type.
-4. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story, meeting the users needs by presenting the data on a dashboard charting web application.
+1. **Layout** - Reviewed the Code Institute learnings to date and Bootstrap themes to extract design ideas.
+2. **User Stories** - Walked through user stories.
+    1. **Header Call-to-action** - As a user, I want to understand the purpose of this website and intuitively understand how to use it.
+    2. **Navbar - Contact** - As a user, I want to be able to contact the developers to offer feedback and suggestions.
+    3. **Navbar - Riddle Game** - As a user, I want to be able to select the homepage, and be presented with a blank player name textarea.
+    4. **Navbar - Game** - As a user, I want to be able to restart the game, and be presented with a blank player name textarea.
+    5. **Enter Player Name** - As a user, I want to be able to enter a unique player name into a textarea, and start the game.
+    6. **Start Game** - As a user, once I select start game, I want to be greeted with my player name, to be presented with the first riddle and my player name to be displayed in a list.
+    6. **Answer Riddles** - As a user, I want to be able to enter an answer into a textarea, submit an answer and if I provide the correct answer, be redirected to the next riddle.
+    7. **Enter Incorrect Answer** - As a user, I want to be able to enter an answer into a textarea, submit an answer and if I provide an incorrect answer, the textarea is cleared, redirecting me to a blank textarea to guess again.
+    8. **List Incorrect Answer** - As a user, I want to be able to view incorrect answers, displayed in a list.
+    8. **Answered all Riddles Correctly ** - As a user, when I have answered all riddles correctly, I want to be redirected to an end of game message.
+3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story, meeting the users needs by presenting the data on a dashboard charting web application.
 
 ## Features
- 
+
 ### Existing Features
 
 The following section describes all the front-end features in this project.
@@ -48,10 +39,8 @@ The following section describes all the front-end features in this project.
 10. **Average Daily Volume per Equity Vs. Price per Equity** - A scatter plot chart displaying 'Average Daily Volume per Equity Vs. Price per Equity', which is updated by industry when a user makes a selection, using the 'Select Industry' drop-down selector. When a selection is made, each chart is automatically upated with the relevant industry data. Provides an X and Y axis, visualisation of relevant data, and is useful for understanding correlation/distribution.
 
 ### Features to Implement
-1. **Interactive Tutorial** - Add a feature to include an interactive tutorial.
-2. **Comma Seperator** - Update hoover metrics to include a comma seperator.
-3. **X and Y axis** - Update to implement improved ways to style both axis's.
-4. **Icons** - Add icons where more streamlined design can be achieved.
+1. **Leaderboard** - Add a feature to include a scoring system that ranks all players.
+2. **Incorrect Answers - Show Riddle Number** - Consider adding a feature to indicate which incorrect answer is related to which riddle, but esure not to make the game too simple for players.
 
 ## Technologies Used
 
@@ -142,6 +131,7 @@ The following is an overview of testing to ensure all functionality works as int
     2. Select the toggle device icon at the top of the window, to open the responsive testing window.
     3. Test how the website is rendering on each device size from Galaxy S5 to iPad Pro.
 
+
 ## Deployment
 The following section describes the process to deploy this project to GitHub Pages.
 
@@ -154,7 +144,18 @@ The following section describes the process to deploy this project to GitHub Pag
 7. The project is now published to GitHub Pages and can be viewed in the browser.
 8. GitHub Pages URL: [The Beach Boys](https://githhayden.github.io/The-Beach-Boys/).
 
-> **Note:** During development, a push to a new GitHub repo resulted in earlier git commits lost.
+
+### Deploy via Heroku
+1. Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
+2. Create new Heroku app, using 'heroku apps:create appname' command.
+3. Push project to Heroku, using 'push -u heroku master' command.
+4. Create scale, using 'heroku ps:scale web=1' command.
+5. Login to Heroku and select newly created app.
+6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
+7. From 'More' menu on the top right, select 'Restart all dynos'.
+8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
+9. Deployed via Heroku: [Riddle Game Website](https://iq-riddle-game.herokuapp.com/).
+
 
 ## Credits
 
@@ -171,44 +172,6 @@ The following section describes the process to deploy this project to GitHub Pag
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Riddle Game
-A game that asks players to input answers to text based riddles.
-
-### Game Instructions
-1. Player enters a unique player name, using a form and selects start game.
-2. Players name is stored and displayed in a list. Player is then presented with a riddle.
-3. Player enters an answer to the riddle, using the form and selects submit.
-4. If a player answers correctly, the player is redirected to the next riddle.
-5. If a player answers incorrectly, the incorrect answer is stored and displayed in a list. The answer form is then cleared so the player can enter an answer again.
-6. If a player answers all riddles correctly, they are redirected to an end of game message.
-
 ### Technologies
 1. **Cloud 9**: IDE `Integrated Development Environment` used to build project end to end.
 2. **Bootstrap**: [Bootstrap Clean Blog Template](https://startbootstrap.com/template-overviews/clean-blog/) used as boilerplate design.
@@ -224,6 +187,7 @@ A game that asks players to input answers to text based riddles.
 9. **Git and GitHub**: Used for version control and to deploy a backup of the project.
 10. **Heroku**: Used to deploy and host final project.
 
+
 ### Development Process
 1. **Workspace**: Blank `Cloud 9` workspace created.
 2. **README.md**: Created with outline of the project and developed as project progressed.
@@ -233,6 +197,13 @@ A game that asks players to input answers to text based riddles.
 6. **Run.py**: Flask and python back end code developed to render application in web browser and execute functionality.
 7. **Commentary**: Developed throughout files to provide code guidance.
 8. **Cloud 9 Linux Terminal**: Used to backup project via incremental `git status, git add <file/s> (staging area), git commit -m "<commentary>"` commands.
+
+
+
+
+
+
+
 
 ### Testing
 **Manual testing**, ongoing via `Cloud 9`, `Run`. Once each functionality coded, checked application operating as expected in web browser by walking through each functionality. Testing included the following:
@@ -253,13 +224,3 @@ A game that asks players to input answers to text based riddles.
 4. **Responsive Testing**: Used Chrome Dev tools to inspect application on various device sizes.
     1. **Bug/Expected Output** - Startgame.html not responsive and skewed on all but a large screen. **Issue** - OPEN TO DEBUG.
 
-### Deploy via Heroku
-1. Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
-2. Create new Heroku app, using 'heroku apps:create appname' command.
-3. Push project to Heroku, using 'push -u heroku master' command.
-4. Create scale, using 'heroku ps:scale web=1' command.
-5. Login to Heroku and select newly created app.
-6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
-7. From 'More' menu on the top right, select 'Restart all dynos'.
-8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
-9. Deployed via Heroku: [Riddle Game Website](https://iq-riddle-game.herokuapp.com/).
