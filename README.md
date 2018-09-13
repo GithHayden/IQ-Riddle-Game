@@ -100,7 +100,7 @@ The following is an overview of testing to ensure all functionality works as int
             - **Issue** - `run.py` not updated with code to write player name to `players.txt`.
             - **Fix** - Updated `run.py` to write to `players.txt`.
         - **Bug 2** - Player name is appearing duplicated on the list of player names.
-            - **Issue** - Player name is being stored in the player name list, with every correct answer that is entered.
+            - **Issue** - Player name is being stored in the player name list, with every correct and incorrect answer that is entered.
             - **Fix** - OPEN BUG.
 5. **Answer Riddles**
     1. Enter an answer in the blank text area.
