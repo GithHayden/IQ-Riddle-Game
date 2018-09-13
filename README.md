@@ -128,20 +128,9 @@ The following is an overview of testing to ensure all functionality works as int
             - **Fix** - OPEN BUG.
 
 ## Deployment
-The following section describes the process to deploy this project to GitHub Pages.
+The following section describes the process to deploy this project to Heroku.
 
-1. Create a new repository within GitHub.
-2. Within GitHub, under the `<> Code` heading, copy `git remote add origin...` command, paste into the IDE terminal and execute.
-3. Within GitHub, under `<> Code` heading, copy `git push -u origin master` command, paste into the IDE terminal and execute.
-4. The project is now pushed to GitHub.
-5. Within GitHub, under the `Settings` heading, go to the `GitHub Pages` section.
-6. Select Master branch and save.
-7. The project is now published to GitHub Pages and can be viewed in the browser.
-8. GitHub Pages URL: [The Beach Boys](https://githhayden.github.io/The-Beach-Boys/).
-
-
-### Deploy via Heroku
-1. Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
+1. Via the IDE Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
 2. Create new Heroku app, using 'heroku apps:create appname' command.
 3. Push project to Heroku, using 'push -u heroku master' command.
 4. Create scale, using 'heroku ps:scale web=1' command.
@@ -149,8 +138,7 @@ The following section describes the process to deploy this project to GitHub Pag
 6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
 7. From 'More' menu on the top right, select 'Restart all dynos'.
 8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
-9. Deployed via Heroku: [Riddle Game Website](https://iq-riddle-game.herokuapp.com/).
-
+9. Deployed via Heroku: [Riddle Game](https://iq-riddle-game.herokuapp.com/).
 
 ## Credits
 
