@@ -4,7 +4,7 @@ import json
 from flask import Flask, render_template, request, flash, redirect, jsonify
 
 app = Flask(__name__)
-app.secret_key = 'a_secret'
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'a_secret')
 
 data = []
 
