@@ -143,11 +143,10 @@ The following section describes the process to deploy this project to Heroku.
 ## Credits
 
 ### Content
-- The text for the About section was copied from [Wikipedia](https://en.wikipedia.org/wiki/The_Beach_Boys).
+- The Riddles for this website were copied from [Riddles Website](https://www.riddles.com/riddles).
 
 ### Media
-- The photo used in this site was copied from [WWMT.com](https://wwmt.com/news/local/the-beach-boys-to-headline-tulip-time-2018-tickets-on-sale-nov-9).
-- The videos and audio tracks in this site were copied from [YouTube](https://www.youtube.com/). They were then converted to MP4 and MP3 files.
+- The photo used in this site was copied from [Background Photo](https://ak4.picdn.net/shutterstock/videos/16982824/thumb/1.jpg?i10c=img.resize(height:160)).
 
 ### Acknowledgements
-- I received inspiration for this project from The Beach Boys videos, music and website, from Bootstrap template designs, from ongoing research online and from Code Institute education.
+- I received inspiration for this project from Bootstrap template designs, from ongoing research online and from Code Institute education.
