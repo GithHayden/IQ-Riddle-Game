@@ -37,7 +37,7 @@ The following section describes all the front-end features in this project.
 
 ### Features to Implement
 1. **Leaderboard** - Add a feature to include a scoring system that ranks all players.
-2. **Incorrect Answers - Show Riddle or Riddle Number** - Consider adding a feature to indicate which incorrect answer is related to which riddle, but ensure not to make the game too simple for players e.g. by storing prior players incorrect answers.
+2. **Incorrect Answers - Show Riddle or Riddle Number** - Consider adding a feature to indicate which incorrect answer is related to which riddle, but ensure not to make the game too simple for players e.g. by storing prior players incorrect answers. Improve how incorrect answers are displayed with the player name.
 
 ## Technologies Used
 The following section describes all technologies and tools used to construct this project.
@@ -149,4 +149,8 @@ The following section describes the process to deploy this project to Heroku.
 - The photo used in this site was copied from [Background Photo](https://ak4.picdn.net/shutterstock/videos/16982824/thumb/1.jpg?i10c=img.resize(height:160)).
 
 ### Acknowledgements
-- I received inspiration for this project from Bootstrap template designs, from ongoing research online and from Code Institute education.
+- I received inspiration for this project from my own interest in IQ tests, [Bootstrap](https://getbootstrap.com/) and ongoing research online. I also used knowledge gained from the [Code Institute](https://www.codeinstitute.net/), Diploma in Software Development.
+
+
+
+
