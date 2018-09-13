@@ -20,9 +20,9 @@
         <h4>Players</h4>
         <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
             {% for user in game_players %}
-            <h6>
+            <ul>
                 <li class="list-unstyled">{{user}}</li>
-            </h6>
+            </ul>
             {% endfor %}
         </div>
     </div>
@@ -41,9 +41,9 @@
         <h4>Incorrect Answers</h4>
         <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
             {% for message in incorrect_answers %}
-            <h6>
+            <ul>
                 <li class="list-unstyled">{{message}}</li>
-            </h6>
+            </ul>
             {% endfor %}
         </div>
     </div>
