@@ -119,7 +119,7 @@ The following is an overview of testing to ensure all functionality works as int
 8. **Responsive Testing**:
     1. In Chrome, right click on the site and select 'inspect', to open the Chrome Dev tools.
     2. Select the toggle device icon at the top of the window, to open the responsive testing window.
-    3. Test how the website is rendering on each device size from Galaxy S5 to iPad Pro.
+    3. Test/walk through how all features and pages are rendering on each device size from Galaxy S5 to iPad Pro.
         - **Bug 1** - Terminal displaying error 'socket.error: [Errno 98] Address already in use [closed]'.
             - **Issue** - Did not select ctrl+c to stop run.py running prior to closing workspace, the following morning encountered this error. 
             - **Fix** - Researched solutions online, used stack overflow. In terminal, ran `lsof -i :8080` to locate port ID. Then ran `sudo kill -9 <process_id>` to kill process.

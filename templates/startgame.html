@@ -12,7 +12,7 @@
         <!-- Player name heading and list of names, within box with scroll bar. -->
         <div class="col-sm-4 mt-3">
             <div  class="text-center">
-                <h4>Player Names</h4>
+                <h6>Player Names</h6>
             </div>
             <div class="text-left" style="height:200px;width:auto;overflow:auto;background-color:#e6ecff">
                 {% for user in game_players %}
@@ -24,15 +24,14 @@
         </div>
         <!-- Enter Answer form and Submit.-->
         <div class="col-sm-4 mt-3">
-            <h4>Enter Answer</h4>
-            <br>
+            <h6 style="margin-bottom:15px">Enter Answer</h6>
             <div class="d-flex justify-content-center align-items-center container">
                 <form method="POST" class="form-inline">
                     <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
                     <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
             </div>
             <div class="d-flex justify-content-center align-items-center container">
-                <div class="text-center">
+                <div class="text-center" style="margin-bottom:15px">
                     <button class="btn btn-basic">Submit</button>
                 </div>
             </div>
@@ -41,8 +40,8 @@
 
         <!-- Incorrect answers player name/s and answer/s, within box with scroll bar. -->
         <div class="col-sm-4 mt-3">
-            <div  class="text-center">
-                <h4>Incorrect Answers</h4>
+            <div class="text-center">
+                <h6>Incorrect Answers</h6>
             </div>
             <div style="height:200px;width:auto;overflow:auto;background-color:#e6ecff">
                 <div class="text-left">
