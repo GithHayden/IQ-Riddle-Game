@@ -124,8 +124,8 @@ The following is an overview of testing to ensure all functionality works as int
             - **Issue** - Did not select ctrl+c to stop run.py running prior to closing workspace, the following morning encountered this error. 
             - **Fix** - Researched solutions online, used stack overflow. In terminal, ran `lsof -i :8080` to locate port ID. Then ran `sudo kill -9 <process_id>` to kill process.
         - **Bug 2** - Application not responsive on smaller devices.
-            - **Issue** - OPEN BUG.
-            - **Fix** - OPEN BUG.
+            - **Issue** - Bootstrap grid layout require changing.
+            - **Fix** - Updated boostrap `<div>` tags with various classes and styling within the html files and retested until appliction fully responsive on all device sizes.
 
 ## Deployment
 The following section describes the process to deploy this project to Heroku.
