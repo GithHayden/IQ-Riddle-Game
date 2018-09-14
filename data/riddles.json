@@ -53,12 +53,12 @@
   {
     "name": "riddle_10",
     "description":
-      "Riddle 11 of 12: At a conference, 12 members shook hands with each other before & after the meeting. How many total number of hand shakes occurred?",
+      "Riddle 11 of 12: At a conference, 12 members shook hands with each other before & after the meeting. How many total number of handshakes occurred?",
     "answer": "132"
   },
   {
     "name": "riddle_11",
-    "description": "Riddle 12 of 12: What has a mouth, but cannot eat. Moves, but has no legs. Has a bank, but cannot put money in it?",
+    "description": "Riddle 12 of 12: What has a mouth but cannot eat. Moves, but has no legs. Has a bank, but cannot put money in it?",
     "answer": "river"
   }
 ]
