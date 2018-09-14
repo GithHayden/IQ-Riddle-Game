@@ -12,15 +12,7 @@
     <!-- Contact form input fields -->
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            {% with messages = get_flashed_messages() %} {% if messages %}
-            <ul class="flashes">
-                {% for message in messages %}
-                <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %} {% endwith %}
             <p>All feedback is welcomed and appreciated. If you'd like to contact the developer, please fill out the form below to send a message.</p>
-
             <form method="POST" name="sentMessage" id="contactForm">
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">

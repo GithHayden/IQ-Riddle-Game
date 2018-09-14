@@ -1,5 +1,5 @@
 # Riddle Game
-This website is a **Flask application**, a python microframework. The target audience is any user who wants to play a guessing-riddle game for entertainment. The game asks players to input a player name and answer a number of text based riddles.
+This website is a riddle game, built using **Flask**, which is a python microframework. The target audience for this website is any user who wants to play a riddle game for entertainment. The game asks players to enter a player name and answer a number of text based riddles correctly to complete the game.
 
 ## UX
 The following section describes the UX process for this project.
