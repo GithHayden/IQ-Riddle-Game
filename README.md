@@ -101,7 +101,7 @@ The following is an overview of testing to ensure all functionality works as int
             - **Fix** - Updated `run.py` to write to `players.txt`.
         - **Bug 2** - Player name is appearing duplicated on the list of player names.
             - **Issue** - Player name is being stored in the player name list, with every correct and incorrect answer that is entered.
-            - **Fix** - OPEN BUG.
+            - **Fix** - `Run.py` contained duplicated coding with every riddle answered to write player name to the player name list. Removed this code.
 5. **Answer Riddles**
     1. Enter an answer in the blank text area.
     2. Select 'Submit' to be redirected to the next riddle if the answer is correct.

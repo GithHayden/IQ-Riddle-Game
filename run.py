@@ -68,8 +68,6 @@ def user(username):
     riddle_index = 0
 
     if request.method == "POST":
-        # Add user to game_players.txt file.
-        write_to_file(GAME_PLAYERS_FILE, username + "\n")
 
         # Get riddle index from hidden field passed in form.
         riddle_index = int(request.form["riddle_index"])
