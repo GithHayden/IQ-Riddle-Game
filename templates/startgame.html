@@ -5,7 +5,7 @@
 
 <!-- Welcome message. -->
 <div class="col-12 text-center">
-    <h3 class="username">Hello {{username}}, please input your answer and select submit.</h3>
+    <h3 class="username">Hello {{username}}, please enter your answer and select submit.</h3>
 </div>
 
 <!-- Riddles questions and answers, from json data via run.py python back-end code.-->
@@ -14,8 +14,34 @@
     <h5> {{ riddles_data[riddle_index]["description"] }} </h5>
 </div>
 
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading text-center">
+                <br>
+                <h2>Enter Answer</h2>
+                <br>
+                <!-- Enter answer form -->
+                <div class="d-flex justify-content-center align-items-center container">
+                    <form method="POST" class="form-inline">
+                        <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
+                        <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
+                </div>
+                <div class="d-flex justify-content-center align-items-center container">
+                    <div class="text-center">
+                        <button class="btn btn-basic">Submit</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Player name heading and list of names, within box with scroll bar. -->
-<div class="row" style="padding-top: 20px; padding-left: 50px">
+<div class="d-flex justify-content-center align-items-center container">
     <div class="col-4" style="padding-left:0px;">
         <h4>Players</h4>
         <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
@@ -26,16 +52,7 @@
             {% endfor %}
         </div>
     </div>
-    <div class="col-4" style="padding-top: 50px; padding-left: 50px">
-        <!-- Enter answer form -->
-        <form method="POST" class="form-inline">
-            <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
-            <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
-            <p style="padding-left: 50px">
-                <button class="btn btn-basic">Submit</button>
-            </p>
-        </form>
-    </div>
+
     <!-- Incorrect answers player name/s and answer/s, within box with scroll bar. -->
     <div class="col-4">
         <h4>Incorrect Answers</h4>
