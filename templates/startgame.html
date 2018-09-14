@@ -1,67 +1,58 @@
 <!-- Code with curley brackets is flask and flask template logic which inherits code from base.html. -->
 {% extends 'base.html' %} {% block content %}
 
-<div class="row"></div>
-
-<!-- Welcome message. -->
-<div class="col-12 text-center">
+<div class="container-fluid text-center">
+    <!-- Welcome message. -->
     <h3 class="username">Hello {{username}}, please enter your answer and select submit.</h3>
-</div>
-
-<!-- Riddles questions and answers, from json data via run.py python back-end code.-->
-<div class="row" style="height: 10px"></div>
-<div class="col-12 text-center" style="color:grey">
-    <h5> {{ riddles_data[riddle_index]["description"] }} </h5>
-</div>
-
-
-<div class="container">
+    <!-- Riddles questions and answers, from json data via run.py python back-end code.-->
+    <h4 style="color:#4747d1"> {{ riddles_data[riddle_index]["description"] }} </h4>
+    <br>
     <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading text-center">
-                <br>
-                <h2>Enter Answer</h2>
-                <br>
-                <!-- Enter answer form -->
-                <div class="d-flex justify-content-center align-items-center container">
-                    <form method="POST" class="form-inline">
-                        <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
-                        <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
-                </div>
-                <div class="d-flex justify-content-center align-items-center container">
-                    <div class="text-center">
-                        <button class="btn btn-basic">Submit</button>
-                    </div>
-                    </form>
-                </div>
+
+        <!-- Player name heading and list of names, within box with scroll bar. -->
+        <div class="col-sm-4 mt-3">
+            <div  class="text-center">
+                <h4>Player Names</h4>
+            </div>
+            <div class="text-left" style="height:200px;width:auto;overflow:auto;background-color:#e6ecff">
+                {% for user in game_players %}
+                <ul>
+                    <li class="list-unstyled">{{user}}</li>
+                </ul>
+                {% endfor %}
             </div>
         </div>
-    </div>
-</div>
-
-
-<!-- Player name heading and list of names, within box with scroll bar. -->
-<div class="d-flex justify-content-center align-items-center container">
-    <div class="col-4" style="padding-left:0px;">
-        <h4>Players</h4>
-        <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
-            {% for user in game_players %}
-            <ul>
-                <li class="list-unstyled">{{user}}</li>
-            </ul>
-            {% endfor %}
+        <!-- Enter Answer form and Submit.-->
+        <div class="col-sm-4 mt-3">
+            <h4>Enter Answer</h4>
+            <br>
+            <div class="d-flex justify-content-center align-items-center container">
+                <form method="POST" class="form-inline">
+                    <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
+                    <input type="hidden" name="riddle_index" id="riddle_index" value={{riddle_index}}>
+            </div>
+            <div class="d-flex justify-content-center align-items-center container">
+                <div class="text-center">
+                    <button class="btn btn-basic">Submit</button>
+                </div>
+            </div>
+            </form>
         </div>
-    </div>
 
-    <!-- Incorrect answers player name/s and answer/s, within box with scroll bar. -->
-    <div class="col-4">
-        <h4>Incorrect Answers</h4>
-        <div style="height:250px;width:300px;overflow:auto;background-color:#e6e6e6">
-            {% for message in incorrect_answers %}
-            <ul>
-                <li class="list-unstyled">{{message}}</li>
-            </ul>
-            {% endfor %}
+        <!-- Incorrect answers player name/s and answer/s, within box with scroll bar. -->
+        <div class="col-sm-4 mt-3">
+            <div  class="text-center">
+                <h4>Incorrect Answers</h4>
+            </div>
+            <div style="height:200px;width:auto;overflow:auto;background-color:#e6ecff">
+                <div class="text-left">
+                    {% for message in incorrect_answers %}
+                    <ul>
+                        <li class="list-unstyled">{{message}}</li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -149,7 +149,7 @@ The following section describes the process to deploy this project to Heroku.
 - The photo used in this site was copied from [Background Photo](https://ak4.picdn.net/shutterstock/videos/16982824/thumb/1.jpg?i10c=img.resize(height:160)).
 
 ### Acknowledgements
-- I received inspiration for this project from my own interest in IQ tests, [Bootstrap](https://getbootstrap.com/) and ongoing research online. I also used knowledge gained from the [Code Institute](https://www.codeinstitute.net/), Diploma in Software Development.
+- I received inspiration for this project from my own interest in IQ tests, [Bootstrap](https://getbootstrap.com/) and ongoing research online. I also used knowledge gained from the [Code Institute](https://www.codeinstitute.net/), Diploma in Software Development. Stack Overflow, W3 Schools, YouTubers, 
 
 
 
