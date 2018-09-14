@@ -1,15 +1,17 @@
-<!-- Code with curley brackets is flask and flask template logic which inherits code from base.html. -->
+<!-- The code with the curley brackets is flask/jinja template logic which inherits code from base.html. -->
 {% extends 'base.html' %} {% block content %}
 
 <div class="container-fluid text-center">
+    
     <!-- Welcome message. -->
     <h3 class="username">Hello {{username}}, please enter your answer and select submit.</h3>
-    <!-- Riddles questions and answers, from json data via run.py python back-end code.-->
+    
+    <!-- Riddles, retrieved from riddles.json via run.py python back-end code.-->
     <h4 style="color:#4747d1"> {{ riddles_data[riddle_index]["description"] }} </h4>
     <br>
     <div class="row">
 
-        <!-- Player name heading and list of names, within box with scroll bar. -->
+        <!-- Player name heading. List of player names, within box with scroll bar. -->
         <div class="col-sm-4 mt-3">
             <div  class="text-center">
                 <h6>Player Names</h6>
@@ -22,7 +24,8 @@
                 {% endfor %}
             </div>
         </div>
-        <!-- Enter Answer form and Submit.-->
+        
+        <!-- Enter Answer form and Submit Button.-->
         <div class="col-sm-4 mt-3">
             <h6 style="margin-bottom:15px">Enter Answer</h6>
             <div class="d-flex justify-content-center align-items-center container">
@@ -38,7 +41,7 @@
             </form>
         </div>
 
-        <!-- Incorrect answers player name/s and answer/s, within box with scroll bar. -->
+        <!-- Incorrect answers. List of player name/s and incorrect answer/s, within box with scroll bar. -->
         <div class="col-sm-4 mt-3">
             <div class="text-center">
                 <h6>Incorrect Answers</h6>
