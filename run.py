@@ -18,21 +18,25 @@ def write_to_file(filename, data):
         file.writelines(data)
 
 def add_users(username):
+    """Add player name to the `players` text file"""
     write_to_file(PLAYERS_FILE,"({0}) {1} - {2)\n".format
         (username.title()))
 
 def get_all_users():
+    """Get all of the players"""
     users = []
     with open(PLAYERS_FILE, "r") as user_messages:
         users = user_messages.readlines()
     return users    
     
 def add_messages(username, message):
+    """Add incorrect answers to the `incorrect_answers` text file"""
     write_to_file(INCORRECT_ANSWERS_FILE, "({0}) - {1}\n".format(
             username.title(),
             message))
 
 def get_all_messages():
+    """Get all of the incorrect answers"""
     messages = []
     with open(INCORRECT_ANSWERS_FILE, "r") as incorrect_answers:
         messages = [row for row in incorrect_answers if len(row.strip()) > 0]
@@ -40,7 +44,7 @@ def get_all_messages():
     
 @app.route('/users/online', methods=["GET", "POST"])
 def game_players():
-    '''Routing view for players after name is input'''
+    '''Routing view for players after player name is input'''
     game_players_file = open(GAME_PLAYERS_FILE)
     game_players = [row for row in game_players_file if len(row.strip()) > 0]
     game_players_file.close()
@@ -76,7 +80,7 @@ def user(username):
         # Convert answer to lowercase to accept uppercase as correct answer.
         user_response = request.form["message"].lower()
 
-        # Compare player/s answer to the correct answer.
+        # Compare players answer to the correct answer.
         if data[riddle_index]["answer"] == user_response:
             # Correct answer
             # Go to next riddle
@@ -98,23 +102,6 @@ def user(username):
     return render_template("startgame.html",
                             username=username, incorrect_answers=messages, riddles_data=data, game_players=game_players, riddle_index=riddle_index)
 
-@app.route('/<username>/<message>')
-def send_message(username, message):
-    """Create a new message and redirect back to the chat page"""
-    add_messages(username, message)
-    return redirect(username)
-
-@app.route('/<username>/log_off', methods=["GET","POST"])
-def log_user_off(username):
-    game_players_file = open(GAME_PLAYERS_FILE)
-    game_players = [row for row in game_players_file if len(row.strip()) > 0 and row.strip() != username]
-    game_players_file.close()
-
-    with open(GAME_PLAYERS_FILE, "w") as game_players_file:
-        for user in game_players:
-            game_players_file.write('%s\n' % user)
-    return;    
-    
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
