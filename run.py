@@ -23,7 +23,7 @@ def add_users(username):
         (username.title()))
 
 def get_all_users():
-    """Get all of the players"""
+    """Get all of the players names from the 'players. text file"""
     users = []
     with open(PLAYERS_FILE, "r") as user_messages:
         users = user_messages.readlines()
@@ -36,7 +36,7 @@ def add_messages(username, message):
             message))
 
 def get_all_messages():
-    """Get all of the incorrect answers"""
+    """Get all of the incorrect answers from the 'incorrect_answers' text file"""
     messages = []
     with open(INCORRECT_ANSWERS_FILE, "r") as incorrect_answers:
         messages = [row for row in incorrect_answers if len(row.strip()) > 0]
@@ -53,7 +53,7 @@ def game_players():
 
 @app.route('/', methods=["GET", "POST"])
 def index():
-    '''Routing view to render/call index.html in browser'''
+    '''Routing view to render/call index.html in the browser'''
     # POST request
     if request.method == "POST":
         write_to_file(PLAYERS_FILE, request.form["username"] + "\n")
@@ -64,7 +64,7 @@ def index():
     
 @app.route('/<username>', methods=["GET", "POST"])
 def user(username):
-    """Display json data"""
+    """Routing view to display the riddles, from the riddles.json file"""
     data = []
     with open("data/riddles.json", "r") as json_data:
         data = json.load(json_data)
@@ -116,7 +116,3 @@ if __name__== '__main__':
             port=int(os.environ.get('PORT')),
             #If debug=True not included, changes will not render in the browser.
             debug=True)
-            
-            
-            
-            
