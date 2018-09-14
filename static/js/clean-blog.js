@@ -1,3 +1,5 @@
+// This file was included with the Bootstrap Clean Blog template
+
 (function($) {
   "use strict"; // Start of use strict
 

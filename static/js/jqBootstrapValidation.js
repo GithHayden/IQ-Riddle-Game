@@ -1,3 +1,5 @@
+// This file was included with the Bootstrap Clean Blog template
+
 /* jqBootstrapValidation
  * A plugin for automating validation on Twitter Bootstrap formatted forms.
  *
